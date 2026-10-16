@@ -118,33 +118,50 @@
       padding-bottom: 10px
     }
 
+    .prayer .ph {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 2px 14px
+    }
+
     .prayer strong {
-      font-weight: 600
+      font-weight: 600;
+      font-size: 1.05rem
+    }
+
+    .prayer .ph span,
+    .prayer .ph a {
+      font-size: .88rem
     }
 
     .times {
       display: flex;
       gap: 6px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       margin: 0;
       padding: 0;
-      list-style: none
+      list-style: none;
+      flex: 1 1 360px;
+      max-width: 560px
     }
 
     .times li {
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-width: 64px;
-      padding: 4px 8px;
+      flex: 1 1 0;
+      min-width: 0;
+      padding: 4px 2px;
       border-radius: 6px;
       background: rgba(255, 255, 255, .08);
-      font-size: .85rem;
-      line-height: 1.3
+      font-size: .82rem;
+      line-height: 1.3;
+      text-align: center
     }
 
     .times b {
-      font-size: 1.02rem;
+      font-size: 1rem;
       font-weight: 600
     }
 
@@ -564,23 +581,60 @@
         scroll-behavior: auto
       }
     }
+    /* mobile header, menu and top banner */
+    .menubtn {
+      display: none;
+      height: 38px;
+      padding: 0 14px;
+      border-radius: 19px;
+      border: 1.5px solid var(--line);
+      background: var(--bg);
+      color: var(--ink);
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer
+    }
+
+    .navjoin {
+      display: none
+    }
+
+    .brand img {
+      flex: none
+    }
+
+    @media (max-width:720px) {
+      header.site .wrap { flex-wrap: wrap; gap: 10px }
+      .brand { flex: 1; min-width: 0; font-size: 1rem; line-height: 1.2 }
+      .menubtn { display: inline-flex; align-items: center; gap: 6px }
+      header.site nav { display: none; width: 100%; order: 5; flex-direction: column; gap: 0 }
+      header.site.open nav { display: flex }
+      header.site nav a { padding: 13px 2px; border-top: 1px solid var(--line); font-size: 1.05rem }
+      header.site .navjoin { display: block; color: var(--ink); font-weight: 600 }
+      header.site .wrap>.btn { display: none }
+      .prayer .ph { justify-content: space-between }
+      .prayer .ph span { order: 3; flex-basis: 100%; opacity: .85 }
+      .times li { padding: 8px 2px }
+      .hero .ar { font-size: 2.8rem; line-height: 1.6 }
+      .hero .cta .btn { flex: 1 1 100%; text-align: center }
+    }
+
+    @media (max-width:560px) {
+      .prayer .wrap { flex-direction: column; align-items: stretch; gap: 8px }
+      .times { flex: none; max-width: none; gap: 4px }
+      .times li { font-size: .72rem }
+      .times b { font-size: .88rem }
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="prayer" aria-label="Prayer times">
-    <div class="wrap">
-      <strong id="today">Today's prayer times</strong>
-      <ul class="times" id="times"></ul>
-      <a href="#prayers" style="font-size:.9rem">Full timetable</a>
-    </div>
-  </div>
-
   <header class="site">
     <div class="wrap">
       <a class="brand" href="#top"><img src="Logo.jpg" alt="" width="44" height="44">Da'watul Islam Havering North</a>
-      <nav aria-label="Main">
+      <nav aria-label="Main" id="mainnav">
+        <a class="navjoin" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank" rel="noopener">Join our WhatsApp group</a>
         <a href="#prayers">Prayers</a>
         <a href="#jumuah">Jumu'ah</a>
         <a href="#events">What's on</a>
@@ -590,10 +644,18 @@
         <a href="#contact">Contact</a>
       </nav>
       <button class="themebtn" id="themebtn" type="button"></button>
+      <button class="menubtn" id="menubtn" type="button" aria-expanded="false" aria-controls="mainnav">&#9776; Menu</button>
       <a class="btn" style="padding:7px 16px" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank"
         rel="noopener">Join WhatsApp</a>
     </div>
   </header>
+
+  <div class="prayer" aria-label="Prayer times">
+    <div class="wrap">
+      <div class="ph"><strong>Prayer times</strong><span id="today"></span><a href="#prayers">Full timetable</a></div>
+      <ul class="times" id="times"></ul>
+    </div>
+  </div>
 
   <main id="top">
     <div class="hero">
@@ -656,7 +718,7 @@
         <p>Classes, talks and community gatherings. Dates are added here as soon as they're confirmed.</p>
         <article class="fbpost" aria-label="Latest post from our Facebook page">
           <div class="hd"><img src="Logo.jpg" alt="">
-            <div><b>Dawatul Islam - Havering North Branch</b><span>Posted 9 October on Facebook</span></div>
+            <div><b>Dawatul Islam Havering North</b><span>Posted 9 October on Facebook</span></div>
           </div>
           <div class="cap">
             <p>Looking for something fun to do with the family? We've got you covered!</p>
@@ -823,11 +885,12 @@
     var mname = new Date(YEAR, MONTH - 1, 1).toLocaleDateString("en-GB", { month: "long", year: "numeric" });
     document.getElementById("pmonth").textContent = mname;
     if (dayIdx >= 0) {
+      var cur = -1;
+      DAYS[dayIdx].split(" ").forEach(function (t, i) { var q = t === "J" ? 810 : mins(t, i); if (i !== 1 && q !== null && q <= now) cur = i });
       DAYS[dayIdx].split(" ").forEach(function (t, i) {
         if (i === 1) return;
-        var mm = mins(t, i), cls = "";
-        if (!nextSet && mm !== null && mm > now) { cls = ' class="next"'; nextSet = true }
-        el.insertAdjacentHTML("beforeend", "<li" + cls + "><span>" + (t === "J" ? "Jumu'ah" : NAMES[i]) + "</span><b>" + (t === "J" ? "Rockchase" : t) + "</b></li>");
+        var cls = i === cur ? ' class="next"' : "";
+        el.insertAdjacentHTML("beforeend", "<li" + cls + "><span>" + (t === "J" ? "Jumu'ah" : NAMES[i]) + "</span><b>" + (t === "J" ? "1:30" : t) + "</b></li>");
       });
     } else { el.insertAdjacentHTML("beforeend", "<li style='min-width:0'>Times for " + mname + " are below</li>") }
     var th = "padding:8px 10px;text-align:left;border-bottom:2px solid var(--green-2);white-space:nowrap", td = "padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap";
@@ -859,6 +922,9 @@
     try { var sv = localStorage.getItem("theme"); if (sv) root.setAttribute("data-theme", sv) } catch (e) { }
     paint();
     tb.addEventListener("click", function () { var n = isDark() ? "light" : "dark"; root.setAttribute("data-theme", n); try { localStorage.setItem("theme", n) } catch (e) { } paint() });
+    var hdr = document.querySelector("header.site"), mb = document.getElementById("menubtn");
+    mb.addEventListener("click", function () { var o = hdr.classList.toggle("open"); mb.setAttribute("aria-expanded", o) });
+    hdr.querySelectorAll("nav a").forEach(function (a) { a.addEventListener("click", function () { hdr.classList.remove("open"); mb.setAttribute("aria-expanded", "false") }) });
     var tt = document.getElementById("totop");
     window.addEventListener("scroll", function () { tt.classList.toggle("show", window.scrollY > 400) }, { passive: true });
     tt.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }) });
