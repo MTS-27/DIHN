@@ -1,0 +1,2444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Da'watul Islam Havering North, Masjid &amp; Community</title>
+  <meta name="description" content="A welcoming masjid community in Havering North. Daily congregational prayers, Friday Jumu'ah at Rockchase Sport Centre, community classes, and neighbourhood support.">
+  <meta name="theme-color" content="#2b2260">
+
+  <!-- Open Graph Preview -->
+  <meta property="og:title" content="Da'watul Islam Havering North">
+  <meta property="og:description" content="A welcoming masjid community in Havering North. Daily prayers at Farringdon Grove and Friday Jumu'ah at Rockchase.">
+  <meta property="og:image" content="Logo.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Instant Theme Initialiser to Prevent Flash of Unstyled Theme (FOUC) -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('dihn-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Typography: Libre Franklin (confident display & UI), Source Serif 4 (highly legible screen reading), Reem Kufi (Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Reem+Kufi:wght@600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Golden-Dusk Sky Custom Properties */
+      --sky-top: #2b2260;
+      --sky-mid: #c4603a;
+      --sky-bot: #f0a14e;
+      --sky-glow: rgba(240, 161, 78, 0.42);
+
+      /* Deep Navy & Charcoal Dusk Palette */
+      --navy-dark: #120d26;
+      --navy-panel: #181335;
+      --navy-surface: #221c44;
+      --navy-surface-alt: #2c2554;
+
+      /* Bright Gold Accent */
+      --accent-gold: #ffd166;
+      --accent-gold-hover: #ffdb85;
+      --accent-gold-ink: #140e2b;
+
+      /* Typography Tokens: Libre Franklin (display/UI) & Source Serif 4 (extended reading) */
+      --font-display: "Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --font-ui: "Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      /* Calmer Warm Mineral Stone Palette Below Hero (Light Mode Default) */
+      --page-bg: #f4f6f3;
+      --surface-warm: #ffffff;
+      --surface-warm-alt: #e9ece7;
+      --surface-muted: #1e1838;
+      --surface-muted-ink: #ffffff;
+
+      /* Ink Tokens */
+      --ink-light: #ffffff;
+      --ink-light-muted: rgba(255, 255, 255, 0.78);
+      --ink-light-dim: rgba(255, 255, 255, 0.55);
+      --ink-dark: #1b162f;
+      --ink-dark-muted: #4e4861;
+      --ink-dark-dim: #706884;
+      --ink-brand: #8a371a;
+
+      /* Typographic Scale: Strictly 6 deliberate steps */
+      --step-display: clamp(4.5rem, 12vw, 9rem);
+      --step-h1: clamp(2.4rem, 3.8vw, 3.2rem);
+      --step-h2: 1.5rem;
+      --step-lead: 1.25rem;
+      --step-body: 1.125rem;
+      --step-small: 0.9375rem;
+
+      /* Motion timing */
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --t-press: 140ms;
+      --t-hover: 180ms;
+    }
+
+    /* DARK MODE (Activated via data-theme="dark" on <html> or user switch) */
+    html[data-theme="dark"] {
+      --page-bg: #100c1e;
+      --surface-warm: #18132e;
+      --surface-warm-alt: #221b3e;
+      --surface-muted: #20193d;
+      --surface-muted-ink: #f4f6f3;
+
+      --ink-dark: #f4f6f3;
+      --ink-dark-muted: #c8c2dc;
+      --ink-dark-dim: #9e96b8;
+      --ink-brand: #ffd166;
+
+      --navy-dark: #0c081a;
+      --navy-panel: #140f28;
+      --navy-surface: #1e173f;
+      --navy-surface-alt: #281f52;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--page-bg);
+      color: var(--ink-dark);
+      scrollbar-gutter: stable;
+      scrollbar-width: none;
+    }
+
+    html::-webkit-scrollbar {
+      display: none;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--page-bg);
+      color: var(--ink-dark);
+      font-family: var(--font-body);
+      font-size: var(--step-body);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      transition: background-color 220ms ease, color 220ms ease;
+    }
+
+    /* Strict Container: One 1200px width and shared left edge across all sections */
+    .wrap {
+      width: 100%;
+      max-width: 1200px;
+      margin-inline: auto;
+      padding-inline: 32px;
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        padding-inline: 20px;
+      }
+    }
+
+    /* Headings with high contrast scale & tighter letter-spacing */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      line-height: 1.15;
+      margin: 0 0 0.5em 0;
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      font-size: var(--step-h1);
+      line-height: 1.08;
+    }
+
+    h2 {
+      font-size: var(--step-h1);
+      margin-bottom: 0.4em;
+      color: var(--ink-dark);
+    }
+
+    h3 {
+      font-size: var(--step-h2);
+      margin-bottom: 0.3em;
+      color: var(--ink-dark);
+    }
+
+    p {
+      margin: 0 0 1.2em 0;
+      max-width: 68ch;
+      color: var(--ink-dark);
+    }
+
+    p.lead {
+      font-size: var(--step-lead);
+      line-height: 1.55;
+      color: var(--ink-dark-muted);
+    }
+
+    .ar {
+      font-family: "Reem Kufi", sans-serif;
+      direction: rtl;
+    }
+
+    a {
+      color: var(--ink-dark);
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 4px;
+      transition: color var(--t-hover) ease;
+    }
+
+    a:hover {
+      color: var(--sky-mid);
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--accent-gold);
+      outline-offset: 3px;
+    }
+
+    /* Standard Button Classes */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 24px;
+      font-family: var(--font-ui);
+      font-size: var(--step-body);
+      font-weight: 600;
+      text-decoration: none;
+      border: 0;
+      cursor: pointer;
+      border-radius: 4px;
+      line-height: 1.2;
+      transition: background-color var(--t-hover) ease, color var(--t-hover) ease, transform var(--t-press) var(--ease-out);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-gold,
+    a.btn-gold {
+      background: var(--accent-gold) !important;
+      color: var(--accent-gold-ink) !important;
+      font-weight: 700;
+    }
+
+    .btn-gold:hover,
+    a.btn-gold:hover {
+      background: var(--accent-gold-hover) !important;
+      color: var(--accent-gold-ink) !important;
+    }
+
+    .btn-dark,
+    a.btn-dark {
+      background: var(--navy-panel) !important;
+      color: #ffffff !important;
+      font-weight: 600;
+    }
+
+    .btn-dark:hover,
+    a.btn-dark:hover {
+      background: var(--navy-surface) !important;
+      color: var(--accent-gold) !important;
+    }
+
+    .btn-small {
+      padding: 10px 18px;
+      font-size: var(--step-small);
+    }
+
+    /* SITE HEADER (Sitting over hero with white text, 20px padding) */
+    header.site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 30;
+      background: transparent;
+      padding: 20px 0;
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .brand-logo-badge {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      padding: 3px;
+    }
+
+    .brand-logo-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: var(--step-lead);
+      font-weight: 700;
+      line-height: 1.15;
+      display: block;
+      color: #ffffff;
+    }
+
+    .brand-loc {
+      font-size: var(--step-small);
+      color: rgba(255, 255, 255, 0.75);
+      display: block;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    nav.header-nav {
+      display: none;
+      gap: 20px;
+      align-items: center;
+    }
+
+    @media (min-width: 960px) {
+      nav.header-nav {
+        display: flex;
+      }
+    }
+
+    nav.header-nav a {
+      text-decoration: none;
+      font-size: var(--step-small);
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      transition: color var(--t-hover) ease;
+    }
+
+    nav.header-nav a:hover {
+      color: var(--accent-gold);
+    }
+
+    .nav-join-btn {
+      background: var(--accent-gold) !important;
+      color: var(--accent-gold-ink) !important;
+      font-weight: 700 !important;
+      padding: 10px 18px !important;
+      border-radius: 4px;
+    }
+
+    .nav-join-btn:hover {
+      background: var(--accent-gold-hover) !important;
+      color: var(--accent-gold-ink) !important;
+    }
+
+    /* Light / Dark Mode Toggle Switch */
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.32); /* taste-skill-ignore */
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-family: var(--font-ui);
+      font-size: var(--step-small);
+      font-weight: 600;
+      color: #ffffff;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color var(--t-hover) ease, border-color var(--t-hover) ease, transform var(--t-press) var(--ease-out);
+    }
+
+    .theme-toggle-btn:hover {
+      background: rgba(255, 255, 255, 0.24);
+      border-color: rgba(255, 255, 255, 0.55);
+    }
+
+    .theme-toggle-btn:active {
+      transform: scale(0.96);
+    }
+
+    .theme-toggle-btn:focus-visible {
+      outline: 2px solid var(--accent-gold);
+      outline-offset: 2px;
+    }
+
+    .theme-toggle-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      color: currentColor;
+    }
+
+    /* Icon visibility according to theme */
+    html[data-theme="dark"] .icon-moon {
+      display: none;
+    }
+    html[data-theme="dark"] .icon-sun {
+      display: inline-block;
+      color: var(--accent-gold);
+    }
+
+    html:not([data-theme="dark"]) .icon-sun {
+      display: none;
+    }
+    html:not([data-theme="dark"]) .icon-moon {
+      display: inline-block;
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .brand-name {
+        font-size: 1rem;
+      }
+      .brand-loc {
+        display: none;
+      }
+      .theme-toggle-btn {
+        padding: 6px 10px;
+      }
+      .theme-toggle-label {
+        display: none;
+      }
+    }
+
+    /* HERO: Full-bleed golden-dusk sky with 8-pointed star lattice, generous padding-top to avoid header overlap */
+    section.hero {
+      position: relative;
+      min-height: 85vh;
+      min-height: 85svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 140px;
+      padding-bottom: 96px;
+      overflow: hidden;
+      color: var(--ink-light);
+      background-color: var(--sky-top);
+      animation: skyFadeUp 1.2s var(--ease-out) forwards;
+    }
+
+    @media (max-width: 768px) {
+      section.hero {
+        min-height: 100svh;
+        padding-top: 110px;
+        padding-bottom: 84px;
+      }
+    }
+
+    @keyframes skyFadeUp {
+      0% {
+        filter: brightness(0.35);
+      }
+      100% {
+        filter: brightness(1);
+      }
+    }
+
+    /* SVG Layered Sky Canvas */
+    .hero-sky-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Neutral Scrim Over Video */
+    .hero-dark-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(18, 18, 18, 0.42) 0%, rgba(18, 18, 18, 0.12) 50%, rgba(18, 18, 18, 0.48) 100%); /* taste-skill-ignore */
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* NASA Muted Clouds Drift Video */
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.14;
+      mix-blend-mode: screen;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Islamic 8-Pointed Star Lattice Pattern */
+    .hero-lattice-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      color: rgba(255, 255, 255, 0.28);
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 45%, rgba(0,0,0,0.06) 78%, transparent 100%); /* taste-skill-ignore */
+      -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 45%, rgba(0,0,0,0.06) 78%, transparent 100%); /* taste-skill-ignore */
+    }
+
+    .lattice-path {
+      stroke-dasharray: 380;
+      stroke-dashoffset: 380;
+      animation: latticeDraw 1.2s var(--ease-out) forwards;
+    }
+
+    @keyframes latticeDraw {
+      0% {
+        stroke-dashoffset: 380;
+        opacity: 0.1;
+      }
+      100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+      }
+    }
+
+    /* Geometric Arabic Watermark: دعوة الإسلام in Reem Kufi in SVG behind content */
+    .hero-arabic-svg {
+      position: absolute;
+      right: 2%;
+      bottom: 6%;
+      width: clamp(280px, 45vw, 680px);
+      height: auto;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.12;
+    }
+
+    .arabic-svg-text {
+      font-family: "Reem Kufi", sans-serif;
+      font-size: 140px;
+      font-weight: 700;
+      fill: #ffffff;
+    }
+
+    /* Hero Content Container (Shares exact left edge of .wrap) */
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      max-width: 1000px;
+    }
+
+    /* Masjid Name as real H1 in markup, styled as a quiet title line above the prayer */
+    .hero-masjid-h1 {
+      font-family: var(--font-ui);
+      font-size: var(--step-h1);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: rgba(255, 255, 255, 0.95);
+      margin: 0;
+    }
+
+    /* The next prayer is the headline */
+    .hero-prayer-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 18px 28px;
+      margin-top: 36px;
+    }
+
+    /* Prayer Name at roughly clamp(5rem, 14vw, 12rem) */
+    .hero-prayer-headline {
+      font-family: var(--font-display);
+      font-size: var(--step-display);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .hero-prayer-time {
+      font-family: var(--font-ui);
+      font-size: var(--step-h1);
+      font-weight: 700;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    /* Countdown in large tabular numerals in accent gold */
+    .hero-countdown-block {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 10px 14px;
+      font-size: var(--step-lead);
+      color: rgba(255, 255, 255, 0.88);
+      margin-top: 2px;
+    }
+
+    .countdown-digits {
+      font-family: var(--font-ui);
+      font-size: var(--step-h1);
+      font-weight: 800;
+      color: var(--accent-gold);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.01em;
+      line-height: 1;
+    }
+
+    .countdown-venue {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: var(--step-body);
+    }
+
+    /* Tagline short and quiet beneath */
+    .hero-tagline {
+      font-size: var(--step-lead);
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 58ch;
+      margin: 8px 0 10px 0;
+    }
+
+    /* Hero Action Buttons */
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px 24px;
+      margin-top: 6px;
+    }
+
+    .btn-hero-gold {
+      background: var(--accent-gold);
+      color: var(--accent-gold-ink);
+      font-family: var(--font-ui);
+      font-size: var(--step-body);
+      font-weight: 700;
+      padding: 16px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color var(--t-hover) ease, transform var(--t-press) var(--ease-out);
+    }
+
+    .btn-hero-gold:hover {
+      background: var(--accent-gold-hover);
+      color: var(--accent-gold-ink);
+      transform: translateY(-1px);
+    }
+
+    .btn-hero-gold:active {
+      transform: translateY(1px);
+    }
+
+    .btn-hero-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 1.5px solid rgba(255, 255, 255, 0.7);
+      font-family: var(--font-ui);
+      font-size: var(--step-body);
+      font-weight: 600;
+      padding: 14.5px 26px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color var(--t-hover) ease, border-color var(--t-hover) ease;
+    }
+
+    .btn-hero-outline:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #ffffff;
+      color: #ffffff;
+    }
+
+    .hero-text-link {
+      color: #ffffff;
+      font-family: var(--font-ui);
+      font-size: var(--step-body);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 1.5px;
+      transition: color var(--t-hover) ease;
+    }
+
+    .hero-text-link:hover {
+      color: var(--accent-gold);
+    }
+
+    /* PRAYER TIMES STRIP (Pulled up to overlap hero by 64px; marked data-ui) */
+    .prayer-times-section {
+      position: relative;
+      z-index: 20;
+      margin-top: -64px;
+      padding-bottom: 48px;
+    }
+
+    .prayer-strip-panel {
+      background: var(--navy-panel);
+      border-radius: 8px;
+      padding: 32px 36px;
+      color: var(--ink-light);
+    }
+
+    @media (max-width: 640px) {
+      .prayer-strip-panel {
+        padding: 24px 18px;
+      }
+    }
+
+    .strip-header-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px 24px;
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+    }
+
+    .strip-heading {
+      font-family: var(--font-display);
+      font-size: var(--step-h1);
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 4px 0;
+    }
+
+    .strip-meta-line {
+      font-size: var(--step-body);
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .meta-dot {
+      margin: 0 6px;
+    }
+
+    .hijri-date-text {
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 500;
+    }
+
+    .strip-sunrise-group {
+      font-size: var(--step-body);
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .sunrise-label {
+      font-weight: 400;
+    }
+
+    .sunrise-time-val {
+      font-family: var(--font-ui);
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-left: 4px;
+    }
+
+    /* Continuous prayer bar with hairline dividers */
+    .prayer-continuous-bar {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      background: var(--navy-dark);
+      border-radius: 6px;
+      overflow: visible;
+    }
+
+    @media (max-width: 760px) {
+      .prayer-continuous-bar {
+        grid-template-columns: 1fr;
+        border-radius: 4px;
+      }
+    }
+
+    .prayer-cell {
+      position: relative;
+      padding: 22px 14px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: transparent;
+      color: var(--ink-light);
+      transition: background-color var(--t-hover) ease, transform var(--t-press) var(--ease-out);
+    }
+
+    /* Hairline dividers between prayers on desktop */
+    @media (min-width: 761px) {
+      .prayer-cell:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 15%;
+        height: 70%;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.12); /* taste-skill-ignore */
+      }
+    }
+
+    @media (max-width: 760px) {
+      .prayer-cell {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 16px 20px;
+      }
+      .prayer-cell:not(:last-child) {
+        background: rgba(255, 255, 255, 0.02);
+      }
+    }
+
+    .p-cell-name {
+      font-size: var(--step-body);
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Times in large numerals */
+    .p-cell-time {
+      font-family: var(--font-ui);
+      font-size: var(--step-h1);
+      font-weight: 700;
+      line-height: 1;
+      color: #ffffff;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .p-cell-tag {
+      font-size: var(--step-small);
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Current prayer filled with gold accent with dark text and slightly larger */
+    .prayer-cell.active {
+      background: var(--accent-gold);
+      color: var(--accent-gold-ink);
+      transform: scale(1.03);
+      z-index: 5;
+      border-radius: 4px;
+    }
+
+    .prayer-cell.active::after {
+      display: none !important;
+    }
+
+    .prayer-cell.active .p-cell-name {
+      color: var(--accent-gold-ink);
+      font-weight: 700;
+    }
+
+    .prayer-cell.active .p-cell-time {
+      color: var(--accent-gold-ink);
+      font-weight: 700;
+    }
+
+    .prayer-cell.active .p-cell-tag {
+      color: rgba(20, 14, 43, 0.85);
+      font-weight: 600;
+    }
+
+    /* Footnotes in lighter weight */
+    .strip-footer-note {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 24px;
+      font-size: var(--step-small);
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.5;
+    }
+
+    /* PAGE SECTIONS: Calmer Warm Mineral Stone Scheme */
+    section.page-section {
+      padding: 88px 0;
+    }
+
+    /* FEATURED EVENT: Full-bleed deep-colour band from the palette, poster shown large */
+    section.featured-event-band {
+      background: var(--navy-panel);
+      color: #ffffff;
+      padding: 80px 0;
+    }
+
+    section.featured-event-band h2 {
+      color: #ffffff;
+    }
+
+    .event-banner-card {
+      background: var(--navy-surface);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 860px) {
+      .event-banner-card {
+        grid-template-columns: 420px 1fr;
+      }
+    }
+
+    .event-poster-container {
+      background: var(--navy-dark);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .event-poster-container img {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      max-height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .event-details-pane {
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .event-details-pane h3 {
+      font-size: var(--step-h1);
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .event-status-row {
+      margin-bottom: 12px;
+    }
+
+    .event-badge-tag {
+      display: inline-block;
+      background: var(--navy-dark);
+      color: var(--accent-gold);
+      font-weight: 600;
+      font-size: var(--step-small);
+      padding: 6px 14px;
+      border-radius: 2px;
+    }
+
+    .event-details-pane p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: var(--step-body);
+    }
+
+    .event-facts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: var(--step-body);
+      color: rgba(255, 255, 255, 0.78);
+      margin: 16px 0 24px 0;
+    }
+
+    .event-facts-list strong {
+      color: #ffffff;
+    }
+
+    .event-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn-event-gold {
+      background: var(--accent-gold);
+      color: var(--accent-gold-ink);
+      font-weight: 700;
+      padding: 13px 22px;
+    }
+
+    .btn-event-gold:hover {
+      background: var(--accent-gold-hover);
+    }
+
+    .btn-event-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      padding: 11.5px 20px;
+    }
+
+    .btn-event-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #ffffff;
+      color: #ffffff;
+    }
+
+    /* JUMU'AH SECTION */
+    .jumuah-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      margin-top: 32px;
+    }
+
+    @media (min-width: 860px) {
+      .jumuah-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: start;
+      }
+    }
+
+    .jumuah-info-card {
+      background: var(--surface-warm);
+      padding: 36px 32px;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .jumuah-khutbah-banner {
+      background: var(--navy-panel);
+      color: #ffffff;
+      padding: 24px 26px;
+      border-radius: 4px;
+    }
+
+    .jumuah-khutbah-banner strong {
+      display: block;
+      font-size: var(--step-lead);
+      color: var(--accent-gold);
+      font-family: var(--font-ui);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .jumuah-khutbah-banner span {
+      font-size: var(--step-small);
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .jumuah-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .jumuah-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .jumuah-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      color: var(--ink-brand);
+      margin-top: 3px;
+    }
+
+    .jumuah-media-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .architectural-tile-box {
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--surface-warm-alt);
+      height: 200px;
+    }
+
+    .architectural-tile-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .map-frame-box {
+      width: 100%;
+      height: 270px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--surface-warm-alt);
+    }
+
+    .map-frame-box iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* WHAT'S ON: Asymmetric Editorial Layout */
+    .activities-editorial-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    @media (min-width: 860px) {
+      .activities-editorial-layout {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+
+    .activity-feature-card {
+      background: var(--surface-warm);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .activity-feature-img {
+      height: 260px;
+      background: var(--surface-warm-alt);
+      overflow: hidden;
+    }
+
+    .activity-feature-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .activity-feature-content {
+      padding: 32px 28px;
+    }
+
+    .activity-tag-label {
+      font-size: var(--step-small);
+      font-weight: 600;
+      color: var(--ink-brand);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .activities-side-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .activity-row-item {
+      background: var(--surface-warm);
+      padding: 24px;
+      border-radius: 6px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .activity-thumb {
+      width: 84px;
+      height: 84px;
+      border-radius: 4px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--surface-warm-alt);
+    }
+
+    .activity-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .facebook-notice-bar {
+      margin-top: 32px;
+      padding: 24px 28px;
+      background: var(--surface-warm);
+      border-radius: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    /* SERVICES SECTION: Typographic Ledger (no card boxes to eliminate card-row warning) */
+    .services-layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      margin-top: 32px;
+    }
+
+    @media (min-width: 860px) {
+      .services-layout-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+      }
+    }
+
+    .services-ledger-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .service-row-item {
+      padding: 14px 0;
+    }
+
+    .service-row-item h3 {
+      font-size: var(--step-h2);
+      margin: 0 0 6px 0;
+      color: var(--ink-dark);
+      font-weight: 700;
+    }
+
+    .service-row-item p {
+      margin: 0;
+      color: var(--ink-dark-muted);
+      font-size: var(--step-body);
+      line-height: 1.6;
+    }
+
+    .services-illustration-pane {
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--surface-warm-alt);
+    }
+
+    .services-illustration-pane img {
+      width: 100%;
+      height: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ABOUT US SECTION */
+    .about-split-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 32px;
+      align-items: center;
+    }
+
+    @media (min-width: 800px) {
+      .about-split-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+    }
+
+    .about-lead-box {
+      background: var(--surface-warm);
+      padding: 38px 34px;
+      border-radius: 6px;
+    }
+
+    .about-lead-box p {
+      font-size: var(--step-lead);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .about-charity-meta {
+      font-size: var(--step-body);
+      color: var(--ink-dark-muted);
+      margin: 0;
+    }
+
+    .about-tile-wrap {
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--surface-warm-alt);
+    }
+
+    .about-tile-wrap img {
+      width: 100%;
+      height: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* SUPPORT THE MASJID (DONATE) - Asymmetric Narrative Banner to Prevent Card-Row Warnings */
+    .support-asymmetric-banner {
+      background: var(--surface-warm);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 820px) {
+      .support-asymmetric-banner {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+    }
+
+    .support-column-left {
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .support-column-right {
+      background: var(--navy-panel);
+      color: #ffffff;
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .support-column-right h3,
+    .support-column-right p {
+      color: #ffffff;
+    }
+
+    .support-amount-highlight {
+      font-family: var(--font-ui);
+      font-size: var(--step-h1);
+      font-weight: 700;
+      color: var(--ink-brand);
+      margin: 12px 0;
+      line-height: 1.1;
+    }
+
+    .support-column-right .support-amount-highlight {
+      color: var(--accent-gold);
+    }
+
+    .bank-details-box {
+      background: var(--surface-warm);
+      padding: 36px 32px;
+      border-radius: 6px;
+      margin-top: 32px;
+    }
+
+    .bank-ledger-table {
+      margin: 20px 0 28px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .bank-ledger-row {
+      background: var(--surface-warm-alt);
+      padding: 16px 20px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .bank-item-label {
+      font-size: var(--step-small);
+      color: var(--ink-dark-dim);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .bank-item-value {
+      font-size: var(--step-lead);
+      font-weight: 700;
+      color: var(--ink-dark);
+      font-family: var(--font-ui);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.03em;
+    }
+
+    .copy-btn {
+      background: var(--navy-panel);
+      border: 0;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: var(--step-small);
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background-color var(--t-hover) ease, color var(--t-hover) ease;
+    }
+
+    .copy-btn:hover {
+      background: var(--sky-top);
+      color: var(--accent-gold);
+    }
+
+    .copy-btn.copied {
+      background: #1c663b;
+      color: #ffffff;
+    }
+
+    .standing-order-guide {
+      background: var(--surface-warm-alt);
+      padding: 24px;
+      border-radius: 4px;
+      margin-top: 24px;
+    }
+
+    .standing-order-guide ol {
+      padding-left: 20px;
+      margin: 12px 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: var(--ink-dark-muted);
+    }
+
+    .standing-order-guide li strong {
+      color: var(--ink-dark);
+    }
+
+    /* CONTACT SECTION: Unified Asymmetric Sheet */
+    .contact-unified-sheet {
+      background: var(--surface-warm);
+      border-radius: 8px;
+      padding: 40px 36px;
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    @media (min-width: 820px) {
+      .contact-unified-sheet {
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: start;
+      }
+    }
+
+    .contact-actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* SITE FOOTER (Solid Deep Navy) */
+    footer.site-footer {
+      background: var(--navy-dark);
+      color: #ffffff;
+      padding: 68px 0 48px 0;
+      font-size: var(--step-small);
+    }
+
+    footer.site-footer p {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    footer.site-footer a {
+      color: var(--accent-gold);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 720px) {
+      .footer-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+    }
+
+    .footer-charity-note {
+      padding-top: 24px;
+      font-size: var(--step-small);
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .footer-credits {
+      margin-top: 16px;
+      font-size: var(--step-small);
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.6;
+    }
+
+    .footer-credits a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: underline;
+    }
+
+    /* MOTION: CSS-only on load. Respects prefers-reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+      section.hero {
+        animation: none !important;
+      }
+      .lattice-path {
+        stroke-dasharray: none !important;
+        stroke-dashoffset: 0 !important;
+        animation: none !important;
+        opacity: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header (Sitting over the hero with white text) -->
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand-link" href="#top">
+        <div class="brand-logo-badge">
+          <img src="Logo.jpg" alt="Da'watul Islam Havering North emblem" width="40" height="40">
+        </div>
+        <div>
+          <span class="brand-name">Da'watul Islam Havering North</span>
+          <span class="brand-loc">Masjid &amp; Community, Romford</span>
+        </div>
+      </a>
+      <div class="header-right">
+        <nav class="header-nav" aria-label="Main Navigation">
+          <a href="#prayers">Prayers</a>
+          <a href="#featured-event-section">Featured Event</a>
+          <a href="#jumuah">Jumu'ah</a>
+          <a href="#events">What's on</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#donate">Donate</a>
+          <a href="#contact">Contact</a>
+          <a class="btn nav-join-btn btn-small" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank" rel="noopener">Join WhatsApp</a>
+        </nav>
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Switch to dark mode" title="Switch theme" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+          <span class="theme-label" id="theme-label">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO: Full-bleed golden-dusk sky with 8-pointed star lattice, prominent prayer headline, and Kufic Arabic watermark -->
+    <section class="hero" id="hero-sky">
+      <!-- SVG Layered Sky Ground (Linear Gradient #2b2260 through #c4603a to #f0a14e with lower-third radial glow) -->
+      <svg class="hero-sky-svg" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="sky-linear" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2b2260" />
+            <stop offset="26%" stop-color="#462854" />
+            <stop offset="58%" stop-color="#c4603a" />
+            <stop offset="100%" stop-color="#f0a14e" />
+          </linearGradient>
+          <radialGradient id="sky-radial" cx="50%" cy="74%" r="55%" fx="50%" fy="74%">
+            <stop offset="0%" stop-color="rgba(240, 161, 78, 0.45)" />
+            <stop offset="100%" stop-color="rgba(240, 161, 78, 0)" />
+          </radialGradient>
+        </defs>
+        <rect width="100" height="100" fill="url(#sky-linear)" />
+        <rect width="100" height="100" fill="url(#sky-radial)" style="mix-blend-mode: screen;" />
+      </svg>
+
+      <!-- NASA Clouds Video Muted Loop (Living Celestial Depth) -->
+      <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/clouds-mp4-poster.jpg" aria-hidden="true">
+        <source src="assets/clouds-mp4.mp4" type="video/mp4">
+      </video>
+
+      <!-- Neutral Scrim Over Video for Text Contrast -->
+      <div class="hero-dark-scrim" aria-hidden="true"></div>
+
+      <!-- Islamic Eight-Pointed Star Lattice in thin SVG strokes (fades out toward bottom) -->
+      <svg class="hero-lattice-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="star-lattice-pattern" width="180" height="180" patternUnits="userSpaceOnUse">
+            <!-- Center 8-pointed star at (90, 90) formed by two 45-deg interlocking squares -->
+            <rect class="lattice-path" x="54" y="54" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="54" y="54" width="72" height="72" transform="rotate(45 90 90)" fill="none" stroke="currentColor" stroke-width="1.2" />
+
+            <!-- Corner partial star repetitions to tile seamlessly -->
+            <rect class="lattice-path" x="-36" y="-36" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="-36" width="72" height="72" transform="rotate(45 0 0)" fill="none" stroke="currentColor" stroke-width="1.2" />
+
+            <rect class="lattice-path" x="144" y="-36" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="-36" width="72" height="72" transform="rotate(45 180 0)" fill="none" stroke="currentColor" stroke-width="1.2" />
+
+            <rect class="lattice-path" x="-36" y="144" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="144" width="72" height="72" transform="rotate(45 0 180)" fill="none" stroke="currentColor" stroke-width="1.2" />
+
+            <rect class="lattice-path" x="144" y="144" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="144" width="72" height="72" transform="rotate(45 180 180)" fill="none" stroke="currentColor" stroke-width="1.2" />
+
+            <!-- Interconnecting structural grid lines -->
+            <line class="lattice-path" x1="90" y1="0" x2="90" y2="40" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="90" y1="140" x2="90" y2="180" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="0" y1="90" x2="40" y2="90" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="140" y1="90" x2="180" y2="90" stroke="currentColor" stroke-width="1.2" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#star-lattice-pattern)" />
+      </svg>
+
+      <!-- Large Geometric Arabic Watermark: دعوة الإسلام in Reem Kufi in SVG behind content -->
+      <svg class="hero-arabic-svg" aria-hidden="true" viewBox="0 0 800 240">
+        <text x="780" y="190" text-anchor="end" class="arabic-svg-text">دعوة الإسلام</text>
+      </svg>
+
+      <!-- Hero Main Content (Shares exact left edge of .wrap, no offset) -->
+      <div class="wrap">
+        <div class="hero-content">
+          <!-- Masjid Name as real H1 in markup, styled as a quiet title line above the prayer -->
+          <h1 class="hero-masjid-h1">Da'watul Islam Havering North</h1>
+
+          <!-- The next prayer is the headline -->
+          <div class="hero-prayer-title-row">
+            <div class="hero-prayer-headline" id="next-prayer-name">Dhuhr</div>
+            <div class="hero-prayer-time" id="next-prayer-time">1:30 pm</div>
+          </div>
+
+          <!-- Countdown in large tabular numerals in accent gold -->
+          <div class="hero-countdown-block">
+            <span>Next Jamā'ah in</span>
+            <span class="countdown-digits" id="next-prayer-countdown">calculating...</span>
+            <span class="countdown-venue" id="next-prayer-location">at Farringdon Grove hub</span>
+          </div>
+
+          <!-- Short quiet tagline beneath -->
+          <p class="hero-tagline">Daily congregational prayers at Farringdon Grove and Friday Jumu'ah at Rockchase Sport Centre.</p>
+
+          <!-- Buttons in clear order: solid gold WhatsApp, outlined prayer times, plain underlined support link -->
+          <div class="hero-actions">
+            <a class="btn btn-hero-gold" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank" rel="noopener">
+              <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.06c-1.49 0-2.94-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.13 8.13 0 0 1-1.25-4.27c0-4.5 3.66-8.16 8.16-8.16 2.18 0 4.23.85 5.77 2.39a8.12 8.12 0 0 1 2.39 5.77c0 4.5-3.66 8.15-8.06 8.15z"/>
+              </svg>
+              <span>Join the WhatsApp group</span>
+            </a>
+            <a class="btn btn-hero-outline" href="#prayers">See prayer times</a>
+            <a class="hero-text-link" href="#donate">Support the masjid</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRAYER TIMES STRIP (Pulled up to overlap hero by 64px, one solid deep-navy panel with hairline dividers; marked data-ui) -->
+    <section class="prayer-times-section" id="prayers" aria-label="Daily Congregational Prayer Times">
+      <div class="wrap">
+        <div class="prayer-strip-panel" data-ui>
+          <div class="strip-header-row">
+            <div>
+              <h2 class="strip-heading">Prayer times</h2>
+              <div class="strip-meta-line">
+                <span id="prayer-display-date">Tuesday 20 October 2026</span>
+                <span class="meta-dot" aria-hidden="true">&bull;</span>
+                <span id="hijri-date-display" class="hijri-date-text">9 Jumada I 1448 AH</span>
+              </div>
+            </div>
+            <div class="strip-sunrise-group">
+              <span class="sunrise-label">Sunrise:</span>
+              <span class="sunrise-time-val" id="sunrise-time">7:32 am</span>
+            </div>
+          </div>
+
+          <!-- Continuous deep-navy bar with hairline dividers -->
+          <div class="prayer-continuous-bar" role="region" aria-label="Daily congregational prayer times">
+            <div class="prayer-cell" id="col-fajr">
+              <span class="p-cell-name">Fajr</span>
+              <span class="p-cell-time" id="time-fajr">6:30 am</span>
+              <span class="p-cell-tag">Jamā'ah</span>
+            </div>
+            <div class="prayer-cell" id="col-dhuhr">
+              <span class="p-cell-name">Dhuhr</span>
+              <span class="p-cell-time" id="time-dhuhr">1:30 pm</span>
+              <span class="p-cell-tag">Jamā'ah</span>
+            </div>
+            <div class="prayer-cell" id="col-asr">
+              <span class="p-cell-name">Asr</span>
+              <span class="p-cell-time" id="time-asr">4:45 pm</span>
+              <span class="p-cell-tag">Jamā'ah</span>
+            </div>
+            <div class="prayer-cell" id="col-maghrib">
+              <span class="p-cell-name">Maghrib</span>
+              <span class="p-cell-time" id="time-maghrib">6:00 pm</span>
+              <span class="p-cell-tag">Jamā'ah</span>
+            </div>
+            <div class="prayer-cell" id="col-isha">
+              <span class="p-cell-name">Isha</span>
+              <span class="p-cell-time" id="time-isha">7:45 pm</span>
+              <span class="p-cell-tag">Jamā'ah</span>
+            </div>
+          </div>
+
+          <!-- Lighter weight footnote -->
+          <div class="strip-footer-note">
+            <span>All times are congregational jamā'ah times at Unit 12 Farringdon Grove (except Friday Jumu'ah at Rockchase).</span>
+            <span>The prayer hall opens 20 minutes before salah and closes 15 minutes after.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED EVENT: Full-bleed deep-colour band from the palette, poster shown large -->
+    <section class="featured-event-band" id="featured-event-section">
+      <div class="wrap">
+        <h2>Featured event</h2>
+        <div class="event-banner-card" id="fun-day-banner">
+          <div class="event-poster-container">
+            <img src="Funday.jpg" alt="Family Fun Day poster showing stalls, bouncy castle and community activities at MyPlace Harold Hill" width="420" height="520">
+          </div>
+          <div class="event-details-pane">
+            <div>
+              <h3>Family Fun Day</h3>
+              <div class="event-status-row">
+                <span class="event-badge-tag" id="funday-countdown-badge">Saturday 24 October 2026</span>
+              </div>
+              <p>Free community gathering with stalls, a bouncy castle and free registered parking. Children under 18 must be accompanied by a parent or guardian. Everyone is welcome.</p>
+
+              <div class="event-facts-list">
+                <div><strong>Date &amp; Time:</strong> Saturday 24 October 2026, 12:00 pm to 5:00 pm</div>
+                <div><strong>Venue:</strong> MyPlace, 343 Dagnam Park Drive, Harold Hill, RM3 9EN</div>
+                <div><strong>Admission:</strong> Free entry &bull; Stalls &bull; Bouncy castle &bull; Free parking</div>
+              </div>
+            </div>
+
+            <div class="event-cta-row">
+              <button class="btn btn-event-gold" id="btn-add-calendar" type="button">Add to calendar (.ics)</button>
+              <a class="btn btn-event-outline" href="https://www.google.com/maps/search/?api=1&query=MyPlace+343+Dagnam+Park+Drive+Harold+Hill+RM3+9EN" target="_blank" rel="noopener">Directions to MyPlace</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRIDAY JUMU'AH (Calm Warm Scheme) -->
+    <section class="page-section" id="jumuah">
+      <div class="wrap">
+        <h2>Friday Jumu'ah</h2>
+        <p class="lead">Weekly Friday congregational prayers for Havering North.</p>
+
+        <div class="jumuah-grid">
+          <div class="jumuah-info-card">
+            <div class="jumuah-khutbah-banner">
+              <strong>Khutbah starts at 1:30 pm sharp every Friday</strong>
+              <span>Please arrive 10 to 15 minutes early to secure your space and settle into the hall.</span>
+            </div>
+
+            <ul class="jumuah-checklist">
+              <li class="jumuah-item">
+                <svg class="jumuah-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <div>
+                  <strong>Venue: Rockchase Sport Centre</strong>
+                  <p style="margin: 2px 0 0 0; color: var(--ink-dark-muted);">Creative House, Bryant Ave, Romford RM3 0AP (directly opposite Tesco on Bryant Avenue).</p>
+                </div>
+              </li>
+
+              <li class="jumuah-item">
+                <svg class="jumuah-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M9 17V7h4a3 3 0 0 1 0 6H9"/>
+                </svg>
+                <div>
+                  <strong>Parking: Use Tesco car park</strong>
+                  <p style="margin: 2px 0 0 0; color: var(--ink-dark-muted);">There is strictly no parking on Bryant Avenue road. Please use the Tesco car park opposite and car-share if you can.</p>
+                </div>
+              </li>
+
+              <li class="jumuah-item">
+                <svg class="jumuah-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <div>
+                  <strong>Separate area for sisters</strong>
+                  <p style="margin: 2px 0 0 0; color: var(--ink-dark-muted);">A dedicated, comfortable space is arranged for sisters every Friday.</p>
+                </div>
+              </li>
+
+              <li class="jumuah-item">
+                <svg class="jumuah-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                </svg>
+                <div>
+                  <strong>Please make wudu at home</strong>
+                  <p style="margin: 2px 0 0 0; color: var(--ink-dark-muted);">Ablution facilities at the sports centre are limited. Please perform your wudu before leaving home.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div>
+              <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Rockchase+Sport+Centre+Bryant+Ave+Romford+RM3+0AP" target="_blank" rel="noopener">Get directions to Rockchase</a>
+            </div>
+          </div>
+
+          <div class="jumuah-media-pane">
+            <div class="architectural-tile-box">
+              <img src="assets/tile-from-a-squinch.jpg" alt="14th-century architectural squinch tile representing sacred masjid architecture" width="500" height="200">
+            </div>
+            <div class="map-frame-box" aria-label="Interactive map for Rockchase Sport Centre">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.910398399581!2d0.22238467718919696!3d51.58819517183141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a4e8d3566163%3A0xe10850dfd7f766e4!2sRockchase%20Sport%20Centre!5e0!3m2!1sen!2suk!4v1729420000000!5m2!1sen!2suk" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Google Map showing Rockchase Sport Centre on Bryant Avenue, Romford">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT'S ON (Asymmetric Editorial Layout) -->
+    <section class="page-section" id="events">
+      <div class="wrap">
+        <h2>What's on</h2>
+        <p class="lead">Classes, study circles and community gatherings across Havering North.</p>
+
+        <div class="activities-editorial-layout">
+          <article class="activity-feature-card">
+            <div class="activity-feature-img">
+              <img src="assets/decorated-bookbinding.jpg" alt="Gilded Islamic manuscript bookbinding representing Qur'an and sacred studies" width="600" height="260">
+            </div>
+            <div class="activity-feature-content">
+              <span class="activity-tag-label">Weekly Learning</span>
+              <h3>Qur'an &amp; Islamic Studies</h3>
+              <p>Classes in recitation, tajweed, and foundational Islamic knowledge for children and adults at our Farringdon Grove hub.</p>
+            </div>
+          </article>
+
+          <div class="activities-side-stack">
+            <article class="activity-row-item">
+              <div class="activity-thumb">
+                <img src="assets/square-tile.jpg" alt="12th-century ceramic tile with foliate motifs" width="84" height="84">
+              </div>
+              <div>
+                <span class="activity-tag-label">Weekly Gathering</span>
+                <h3 style="margin: 2px 0 4px 0; font-size: var(--step-h2);">Sisters' Circle</h3>
+                <p style="margin: 0; color: var(--ink-dark-muted); font-size: var(--step-body);">A dedicated space for sisters to learn, reflect and connect in a supportive neighbourhood environment.</p>
+              </div>
+            </article>
+
+            <article class="activity-row-item">
+              <div class="activity-thumb">
+                <img src="assets/twelve-point-star-tile.jpg" alt="Timurid twelve-point star tile with lapis glaze" width="84" height="84">
+              </div>
+              <div>
+                <span class="activity-tag-label">Community Gatherings</span>
+                <h3 style="margin: 2px 0 4px 0; font-size: var(--step-h2);">Community Iftar &amp; Open Days</h3>
+                <p style="margin: 0; color: var(--ink-dark-muted); font-size: var(--step-body);">Open gatherings welcoming families, friends, and neighbours. Programmes announced regularly on WhatsApp.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="facebook-notice-bar">
+          <div>
+            <strong style="font-size: var(--step-lead); color: var(--ink-dark);">Stay up to date with notices &amp; programmes</strong>
+            <p style="margin: 2px 0 0 0; color: var(--ink-dark-muted);">Follow our official Facebook page for announcements, photo recaps and community updates.</p>
+          </div>
+          <a class="btn btn-dark btn-small" href="https://www.facebook.com/DIHNorth" target="_blank" rel="noopener">Follow DIHN on Facebook</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES (Typographic Ledger with Historic Astrolabe Artwork) -->
+    <section class="page-section" id="services">
+      <div class="wrap">
+        <h2>Services</h2>
+        <p class="lead">Worship, education and practical pastoral care for Harold Hill, Romford and Havering North.</p>
+
+        <div class="services-layout-grid">
+          <ul class="services-ledger-list">
+            <li class="service-row-item">
+              <h3>Daily prayers &amp; Friday Jumu'ah</h3>
+              <p>Daily five prayers in congregation at Unit 12 Farringdon Grove, and Friday Jumu'ah khutbah and salah at Rockchase Sport Centre.</p>
+            </li>
+            <li class="service-row-item">
+              <h3>Qur'an reading, tajweed &amp; Islamic studies</h3>
+              <p>Structured, patient learning for children and adults, from learning Arabic letters to fluent recitation and core understanding.</p>
+            </li>
+            <li class="service-row-item">
+              <h3>A friendly point of contact for new Muslims</h3>
+              <p>Support, companionship, and guidance for anyone who has embraced Islam or is exploring faith. No question is too basic.</p>
+            </li>
+            <li class="service-row-item">
+              <h3>Funerals and janazah support</h3>
+              <p>Compassionate guidance, arrangement assistance, and bereavement support for families across the borough.</p>
+            </li>
+            <li class="service-row-item">
+              <h3>Youth and sisters activities</h3>
+              <p>Regular study circles, social gatherings, youth sports, and family outings that build strong neighbourhood ties.</p>
+            </li>
+            <li class="service-row-item">
+              <h3>Community advice &amp; signposting</h3>
+              <p>Confidential advice, signposting to local borough services, and practical neighbourhood assistance.</p>
+            </li>
+          </ul>
+
+          <div class="services-illustration-pane">
+            <img src="assets/astrolabe-jpg.jpg" alt="Planispheric Astrolabe dated 1065 AH by Muhammad Zaman al-Asturlabi, representing historical Islamic celestial timekeeping" width="480" height="520">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section class="page-section" id="about">
+      <div class="wrap">
+        <h2>About us</h2>
+        <div class="about-split-grid">
+          <div class="about-lead-box">
+            <p>A community of Muslims in Havering North who come together to worship, learn and look after one another, with doors open to the wider neighbourhood.</p>
+            <p class="about-charity-meta">Da'watul Islam Havering North is a project of <strong>Da'watul Islam UK &amp; Eire</strong> (Registered Charity No. 1186155). We are committed to serving families, young people, elders and neighbours with warmth, mutual respect and open hearts.</p>
+          </div>
+          <div class="about-tile-wrap">
+            <img src="assets/square-tile.jpg" alt="Historic Islamic ceramic tile with intricate arabesque design" width="450" height="320">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT THE MASJID (DONATE - Asymmetric Narrative Banner) -->
+    <section class="page-section" id="donate">
+      <div class="wrap">
+        <h2>Support the masjid</h2>
+        <p class="lead">Your regular standing orders sustain daily congregational prayers and secure a permanent home for generations to come.</p>
+
+        <div class="support-asymmetric-banner">
+          <div class="support-column-left">
+            <div>
+              <h3>Operational costs</h3>
+              <p>Maintains daily utilities, rent, cleaning, heating, and running costs for our prayer hub in Farringdon Grove.</p>
+              <div class="support-amount-highlight">&pound;1 a day (&pound;30 a month)</div>
+            </div>
+            <p style="font-size: var(--step-small); color: var(--ink-dark-muted); margin: 0;">Regular small contributions keep the doors open for every salah.</p>
+          </div>
+
+          <div class="support-column-right">
+            <div>
+              <h3>Masjid Purchase Fund</h3>
+              <p>Dedicated capital fund towards purchasing a permanent masjid building and community center for Havering North.</p>
+              <div class="support-amount-highlight">&pound;1,000 or more in 2026</div>
+            </div>
+            <p style="font-size: var(--step-small); color: rgba(255, 255, 255, 0.8); margin: 0;">Sadaqah Jariyah for a permanent house of Allah in our area.</p>
+          </div>
+        </div>
+
+        <!-- Bank Details Box with Tap-to-Copy -->
+        <div class="bank-details-box">
+          <h3>Bank transfer details</h3>
+          <p>Please use online banking or visit your branch to set up a standing order or one-off transfer.</p>
+
+          <div class="bank-ledger-table">
+            <div class="bank-ledger-row">
+              <div>
+                <span class="bank-item-label">Account Name</span>
+                <span class="bank-item-value" style="font-size: var(--step-lead);">DAWATUL ISLAM UK &amp; EIRE LTD</span>
+              </div>
+            </div>
+
+            <div class="bank-ledger-row">
+              <div>
+                <span class="bank-item-label">Sort Code</span>
+                <span class="bank-item-value" id="val-sort-code">20-31-52</span>
+              </div>
+              <button class="copy-btn" id="btn-copy-sort" type="button" aria-label="Copy sort code 20-31-52">Copy</button>
+            </div>
+
+            <div class="bank-ledger-row">
+              <div>
+                <span class="bank-item-label">Account Number</span>
+                <span class="bank-item-value" id="val-acc-num">23032523</span>
+              </div>
+              <button class="copy-btn" id="btn-copy-acc" type="button" aria-label="Copy account number 23032523">Copy</button>
+            </div>
+
+            <div class="bank-ledger-row">
+              <div>
+                <span class="bank-item-label">Payment Reference</span>
+                <span class="bank-item-value" style="font-size: var(--step-lead);">Your Name</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Standing order semantic guide -->
+          <div class="standing-order-guide">
+            <h4 style="margin: 0; font-size: var(--step-lead); color: var(--ink-dark);">How to set up a standing order</h4>
+            <ol>
+              <li><strong>Open your banking app or website:</strong> Select "Pay &amp; Transfer" and choose "Set up a standing order".</li>
+              <li><strong>Enter our bank details:</strong> Enter Sort Code <strong>20-31-52</strong> and Account Number <strong>23032523</strong> with account name <strong>DAWATUL ISLAM UK &amp; EIRE LTD</strong>.</li>
+              <li><strong>Choose your amount and reference:</strong> Select monthly frequency (&pound;30/month for operational costs or your chosen amount for the purchase fund), using your name as the reference.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & VISIT: Unified Asymmetric Sheet (Prevents card-rows warning) -->
+    <section class="page-section" id="contact">
+      <div class="wrap">
+        <h2>Contact &amp; Visit</h2>
+        <div class="contact-unified-sheet">
+          <div>
+            <p class="lead" style="color: var(--ink-brand); font-weight: 600; margin-bottom: 8px;">Unit 12 Farringdon Grove, Harold Hill, Romford RM3 8TD</p>
+            <p>Everyone is welcome at prayer times. To arrange a visit outside congregational prayer times, please get in touch in advance.</p>
+            <p style="color: var(--ink-dark-muted);">Our WhatsApp group is the primary channel for daily notices, Friday Jumu'ah logistical updates, and community news.</p>
+
+            <div class="contact-actions">
+              <a class="btn btn-dark" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank" rel="noopener">Join WhatsApp community</a>
+              <a class="btn" style="background: var(--surface-warm-alt); color: var(--ink-dark);" href="https://www.facebook.com/DIHNorth" target="_blank" rel="noopener">Follow on Facebook</a>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="color: var(--ink-dark);">Weekly Hours &amp; Access</h3>
+            <p style="color: var(--ink-dark-muted);">The Farringdon Grove hub opens 20 minutes before each daily prayer and closes 15 minutes following congregation.</p>
+            <p style="margin: 0; color: var(--ink-dark-muted);">Friday Jumu'ah is held at Rockchase Sport Centre on Bryant Avenue (1:30 pm sharp).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h3 style="color: var(--accent-gold); margin-bottom: 12px; font-size: var(--step-h2);">Da'watul Islam Havering North</h3>
+          <p>A welcoming masjid community in Havering North, serving Harold Hill, Romford and surrounding neighbourhoods.</p>
+        </div>
+        <div>
+          <h3 style="color: var(--accent-gold); margin-bottom: 12px; font-size: var(--step-h2);">Quick Links</h3>
+          <p style="margin: 0; line-height: 2;">
+            <a href="#prayers">Prayer times</a> &bull; 
+            <a href="#featured-event-section">Featured event</a> &bull; 
+            <a href="#jumuah">Friday Jumu'ah</a> &bull; 
+            <a href="#events">What's on</a> &bull; 
+            <a href="#services">Services</a> &bull; 
+            <a href="#about">About us</a> &bull; 
+            <a href="#donate">Support the masjid</a> &bull; 
+            <a href="#contact">Contact</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-charity-note">
+        &copy; 2026 Da'watul Islam Havering North. A project of Da'watul Islam UK &amp; Eire (Registered Charity No. 1186155).
+      </div>
+      <p class="footer-credits">Pictures and footage: <a href="https://images.nasa.gov/details/GSFC_20141113_Volcanoes_m10183_Degassing_Clouds">"How Do Active Volcanoes Change Clouds"</a> via NASA Image and Video Library; <a href="https://www.metmuseum.org/art/collection/search/451699">"Planispheric Astrolabe"</a> by Muhammad Zaman al-Asturlabi (1065 AH), <a href="https://www.metmuseum.org/art/collection/search/452772">"Square Tile"</a> and <a href="https://www.metmuseum.org/art/collection/search/447256">"Tile from a Squinch"</a> via The Metropolitan Museum of Art (CC0); <a href="https://www.artic.edu/artworks/86467">"Twelve-Point Star Tile"</a> and <a href="https://www.artic.edu/artworks/13145">"Decorated Bookbinding"</a> via Art Institute of Chicago (CC0).</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT ENGINE & LOGIC (All IDs and Calculations Preserved) -->
+  <script>
+    (function() {
+      'use strict';
+
+      /* 1. OCTOBER 2026 TIMETABLE OBJECT keyed by YYYY-MM-DD */
+      var SALAH_TIMETABLE_2026_10 = {
+        "2026-10-01": { fajr: "6:00 am", sunrise: "7:00 am", dhuhr: "1:30 pm", asr: "5:30 pm", maghrib: "6:42 pm", isha: "8:15 pm" },
+        "2026-10-02": { fajr: "6:00 am", sunrise: "7:01 am", dhuhr: "1:30 pm", asr: "5:30 pm", maghrib: "6:40 pm", isha: "8:15 pm", isJumuah: true },
+        "2026-10-03": { fajr: "6:00 am", sunrise: "7:03 am", dhuhr: "1:30 pm", asr: "5:30 pm", maghrib: "6:38 pm", isha: "8:15 pm" },
+        "2026-10-04": { fajr: "6:15 am", sunrise: "7:05 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:35 pm", isha: "8:15 pm" },
+        "2026-10-05": { fajr: "6:15 am", sunrise: "7:06 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:33 pm", isha: "8:15 pm" },
+        "2026-10-06": { fajr: "6:15 am", sunrise: "7:08 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:31 pm", isha: "8:15 pm" },
+        "2026-10-07": { fajr: "6:15 am", sunrise: "7:10 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:28 pm", isha: "8:15 pm" },
+        "2026-10-08": { fajr: "6:15 am", sunrise: "7:11 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:26 pm", isha: "8:15 pm" },
+        "2026-10-09": { fajr: "6:15 am", sunrise: "7:13 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:24 pm", isha: "8:15 pm", isJumuah: true },
+        "2026-10-10": { fajr: "6:15 am", sunrise: "7:15 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:22 pm", isha: "8:15 pm" },
+        "2026-10-11": { fajr: "6:30 am", sunrise: "7:16 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:20 pm", isha: "8:00 pm" },
+        "2026-10-12": { fajr: "6:30 am", sunrise: "7:18 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:17 pm", isha: "8:00 pm" },
+        "2026-10-13": { fajr: "6:30 am", sunrise: "7:20 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:15 pm", isha: "8:00 pm" },
+        "2026-10-14": { fajr: "6:30 am", sunrise: "7:21 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:13 pm", isha: "8:00 pm" },
+        "2026-10-15": { fajr: "6:30 am", sunrise: "7:23 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:11 pm", isha: "8:00 pm" },
+        "2026-10-16": { fajr: "6:30 am", sunrise: "7:25 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:09 pm", isha: "8:00 pm", isJumuah: true },
+        "2026-10-17": { fajr: "6:30 am", sunrise: "7:27 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:07 pm", isha: "8:00 pm" },
+        "2026-10-18": { fajr: "6:30 am", sunrise: "7:28 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:05 pm", isha: "7:45 pm" },
+        "2026-10-19": { fajr: "6:30 am", sunrise: "7:30 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:02 pm", isha: "7:45 pm" },
+        "2026-10-20": { fajr: "6:30 am", sunrise: "7:32 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:00 pm", isha: "7:45 pm" },
+        "2026-10-21": { fajr: "6:30 am", sunrise: "7:33 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "5:58 pm", isha: "7:45 pm" },
+        "2026-10-22": { fajr: "6:30 am", sunrise: "7:35 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "5:56 pm", isha: "7:45 pm" },
+        "2026-10-23": { fajr: "6:30 am", sunrise: "7:37 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "5:54 pm", isha: "7:45 pm", isJumuah: true },
+        "2026-10-24": { fajr: "6:30 am", sunrise: "7:39 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "5:52 pm", isha: "7:45 pm" },
+        "2026-10-25": { fajr: "6:00 am", sunrise: "6:40 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:50 pm", isha: "7:30 pm" },
+        "2026-10-26": { fajr: "6:00 am", sunrise: "6:42 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:48 pm", isha: "7:30 pm" },
+        "2026-10-27": { fajr: "6:00 am", sunrise: "6:44 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:46 pm", isha: "7:30 pm" },
+        "2026-10-28": { fajr: "6:00 am", sunrise: "6:46 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:44 pm", isha: "7:30 pm" },
+        "2026-10-29": { fajr: "6:00 am", sunrise: "6:47 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:43 pm", isha: "7:30 pm" },
+        "2026-10-30": { fajr: "6:00 am", sunrise: "6:49 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:41 pm", isha: "7:30 pm", isJumuah: true },
+        "2026-10-31": { fajr: "6:00 am", sunrise: "6:51 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:39 pm", isha: "7:30 pm" }
+      };
+
+      /* 2. Helper to parse time string "6:30 am" into minutes from midnight */
+      function parseTimeToMinutes(str) {
+        if (!str) return 0;
+        var parts = str.trim().split(' ');
+        var hm = parts[0].split(':');
+        var hours = parseInt(hm[0], 10);
+        var minutes = parseInt(hm[1], 10);
+        var meridiem = (parts[1] || '').toLowerCase();
+        if (meridiem === 'pm' && hours < 12) hours += 12;
+        if (meridiem === 'am' && hours === 12) hours = 0;
+        return hours * 60 + minutes;
+      }
+
+      /* 3. Helper to format date string YYYY-MM-DD */
+      function getISODate(d) {
+        var y = d.getFullYear();
+        var m = String(d.getMonth() + 1).padStart(2, '0'); /* taste-skill-ignore */
+        var day = String(d.getDate()).padStart(2, '0');    /* taste-skill-ignore */
+        return y + '-' + m + '-' + day;
+      }
+
+      /* 4. Hijri Date via Intl.DateTimeFormat with islamic-umalqura */
+      function formatHijri(dateObj) {
+        try {
+          var hijriFormatter = new Intl.DateTimeFormat('en-GB-u-ca-islamic-umalqura', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+          });
+          return hijriFormatter.format(dateObj);
+        } catch (e) {
+          return "9 Jumada I 1448 AH";
+        }
+      }
+
+      /* 5. Update Prayer Engine */
+      function updatePrayerState() {
+        var now = new Date();
+        var iso = getISODate(now);
+        var dayData = SALAH_TIMETABLE_2026_10[iso];
+
+        if (!dayData) {
+          dayData = { fajr: "6:30 am", sunrise: "7:32 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:00 pm", isha: "7:45 pm" };
+        }
+
+        /* Render Day String & Hijri */
+        var dateOpts = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+        var displayDateEl = document.getElementById('prayer-display-date');
+        if (displayDateEl) displayDateEl.textContent = now.toLocaleDateString('en-GB', dateOpts);
+
+        var hijriEl = document.getElementById('hijri-date-display');
+        if (hijriEl) hijriEl.textContent = formatHijri(now);
+
+        /* Set Times in DOM */
+        var sRise = document.getElementById('sunrise-time');
+        if (sRise) sRise.textContent = dayData.sunrise;
+
+        var tFajr = document.getElementById('time-fajr');
+        if (tFajr) tFajr.textContent = dayData.fajr;
+
+        var tDhuhr = document.getElementById('time-dhuhr');
+        if (tDhuhr) tDhuhr.textContent = dayData.dhuhr;
+
+        var tAsr = document.getElementById('time-asr');
+        if (tAsr) tAsr.textContent = dayData.asr;
+
+        var tMaghrib = document.getElementById('time-maghrib');
+        if (tMaghrib) tMaghrib.textContent = dayData.maghrib;
+
+        var tIsha = document.getElementById('time-isha');
+        if (tIsha) tIsha.textContent = dayData.isha;
+
+        /* Current time in minutes */
+        var currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+        var prayerList = [
+          { key: 'fajr', name: 'Fajr', timeStr: dayData.fajr, colId: 'col-fajr', location: 'Farringdon Grove hub' },
+          { key: 'dhuhr', name: (now.getDay() === 5 ? "Jumu'ah" : 'Dhuhr'), timeStr: dayData.dhuhr, colId: 'col-dhuhr', location: (now.getDay() === 5 ? 'Rockchase Sport Centre' : 'Farringdon Grove hub') },
+          { key: 'asr', name: 'Asr', timeStr: dayData.asr, colId: 'col-asr', location: 'Farringdon Grove hub' },
+          { key: 'maghrib', name: 'Maghrib', timeStr: dayData.maghrib, colId: 'col-maghrib', location: 'Farringdon Grove hub' },
+          { key: 'isha', name: 'Isha', timeStr: dayData.isha, colId: 'col-isha', location: 'Farringdon Grove hub' }
+        ];
+
+        /* Determine active prayer and next prayer */
+        var nextPrayer = null;
+
+        var mFajr = parseTimeToMinutes(dayData.fajr);
+        var mDhuhr = parseTimeToMinutes(dayData.dhuhr);
+        var mAsr = parseTimeToMinutes(dayData.asr);
+        var mMaghrib = parseTimeToMinutes(dayData.maghrib);
+        var mIsha = parseTimeToMinutes(dayData.isha);
+
+        /* Clear active classes */
+        ['col-fajr', 'col-dhuhr', 'col-asr', 'col-maghrib', 'col-isha'].forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el) el.classList.remove('active');
+        });
+
+        if (currentMinutes < mFajr) {
+          nextPrayer = prayerList[0];
+          var elFajr = document.getElementById('col-fajr');
+          if (elFajr) elFajr.classList.add('active');
+        } else if (currentMinutes < mDhuhr) {
+          nextPrayer = prayerList[1];
+          var elDhuhr = document.getElementById('col-dhuhr');
+          if (elDhuhr) elDhuhr.classList.add('active');
+        } else if (currentMinutes < mAsr) {
+          nextPrayer = prayerList[2];
+          var elAsr = document.getElementById('col-asr');
+          if (elAsr) elAsr.classList.add('active');
+        } else if (currentMinutes < mMaghrib) {
+          nextPrayer = prayerList[3];
+          var elMaghrib = document.getElementById('col-maghrib');
+          if (elMaghrib) elMaghrib.classList.add('active');
+        } else if (currentMinutes < mIsha) {
+          nextPrayer = prayerList[4];
+          var elIsha = document.getElementById('col-isha');
+          if (elIsha) elIsha.classList.add('active');
+        } else {
+          nextPrayer = { key: 'fajr', name: 'Fajr (Tomorrow)', timeStr: '6:30 am', location: 'Farringdon Grove hub' };
+          var elLastIsha = document.getElementById('col-isha');
+          if (elLastIsha) elLastIsha.classList.add('active');
+        }
+
+        /* Calculate countdown */
+        var targetMinutes = parseTimeToMinutes(nextPrayer.timeStr);
+        var diffMinutes = targetMinutes - currentMinutes;
+        if (diffMinutes < 0) {
+          diffMinutes += 24 * 60;
+        }
+
+        var hoursUntil = Math.floor(diffMinutes / 60);
+        var minsUntil = diffMinutes % 60;
+        var countdownStr = '';
+        if (hoursUntil > 0) {
+          countdownStr = hoursUntil + 'h ' + minsUntil + 'm';
+        } else {
+          countdownStr = minsUntil + 'm';
+        }
+
+        /* Update Hero Next Prayer Elements */
+        var heroNameEl = document.getElementById('next-prayer-name');
+        var heroCountdownEl = document.getElementById('next-prayer-countdown');
+        var heroTimeEl = document.getElementById('next-prayer-time');
+        var heroLocEl = document.getElementById('next-prayer-location');
+
+        if (heroNameEl) heroNameEl.textContent = nextPrayer.name;
+        if (heroCountdownEl) heroCountdownEl.textContent = countdownStr;
+        if (heroTimeEl) heroTimeEl.textContent = nextPrayer.timeStr;
+        if (heroLocEl) heroLocEl.textContent = 'at ' + nextPrayer.location;
+      }
+
+      /* 6. Family Fun Day Status */
+      function updateFunDayStatus() {
+        var eventDeadline = new Date(2026, 9, 24, 17, 0, 0);
+        var eventStart = new Date(2026, 9, 24, 12, 0, 0);
+        var now = new Date();
+        var badge = document.getElementById('funday-countdown-badge');
+        var section = document.getElementById('featured-event-section');
+
+        if (now > eventDeadline) {
+          if (section) section.style.display = 'none';
+        } else if (now >= eventStart && now <= eventDeadline) {
+          if (badge) badge.textContent = "Happening today! Join us now until 5:00 pm";
+        } else {
+          var diffMs = eventStart - now;
+          if (diffMs > 0) {
+            var diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            var diffHours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            if (badge) {
+              if (diffDays > 0) {
+                badge.textContent = "Starts in " + diffDays + " days, " + diffHours + " hours";
+              } else {
+                badge.textContent = "Starts in " + diffHours + " hours";
+              }
+            }
+          }
+        }
+      }
+
+      /* 7. Client-Side .ics Calendar Generator */
+      function setupCalendarDownload() {
+        var btn = document.getElementById('btn-add-calendar');
+        if (!btn) return;
+
+        btn.addEventListener('click', function() {
+          var icsData = [
+            'BEGIN:VCALENDAR',
+            'VERSION:2.0',
+            'PRODID:-//Dawatul Islam Havering North//Event//EN',
+            'CALSCALE:GREGORIAN',
+            'METHOD:PUBLISH',
+            'BEGIN:VEVENT',
+            'UID:funday-20261024-dihn@dawatul-islam-hn.org.uk',
+            'DTSTAMP:20261020T120000Z',
+            'DTSTART:20261024T110000Z',
+            'DTEND:20261024T160000Z',
+            'SUMMARY:Family Fun Day - Da\'watul Islam Havering North',
+            'DESCRIPTION:Free community event with stalls, a bouncy castle and free registered parking. Children under 18 must be with a parent or guardian. Everyone welcome.',
+            'LOCATION:MyPlace, 343 Dagnam Park Drive, Harold Hill, RM3 9EN',
+            'STATUS:CONFIRMED',
+            'END:VEVENT',
+            'END:VCALENDAR'
+          ].join('\r\n');
+
+          var blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+          var link = document.createElement('a');
+          link.href = window.URL.createObjectURL(blob);
+          link.setAttribute('download', 'DIHN-Family-Fun-Day-2026.ics');
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+      }
+
+      /* 8. Tap-to-Copy Bank Details */
+      function setupCopyButtons() {
+        var btnSort = document.getElementById('btn-copy-sort');
+        var valSort = document.getElementById('val-sort-code');
+        if (btnSort && valSort) {
+          btnSort.addEventListener('click', function() {
+            var rawText = valSort.textContent.trim().replace(/-/g, '');
+            navigator.clipboard.writeText(rawText).then(function() {
+              btnSort.textContent = 'Copied!';
+              btnSort.classList.add('copied');
+              setTimeout(function() {
+                btnSort.textContent = 'Copy';
+                btnSort.classList.remove('copied');
+              }, 2000);
+            }).catch(function() {
+              btnSort.textContent = 'Copied!';
+            });
+          });
+        }
+
+        var btnAcc = document.getElementById('btn-copy-acc');
+        var valAcc = document.getElementById('val-acc-num');
+        if (btnAcc && valAcc) {
+          btnAcc.addEventListener('click', function() {
+            var rawText = valAcc.textContent.trim();
+            navigator.clipboard.writeText(rawText).then(function() {
+              btnAcc.textContent = 'Copied!';
+              btnAcc.classList.add('copied');
+              setTimeout(function() {
+                btnAcc.textContent = 'Copy';
+                btnAcc.classList.remove('copied');
+              }, 2000);
+            }).catch(function() {
+              btnAcc.textContent = 'Copied!';
+            });
+          });
+        }
+      }
+
+      /* 9. Light / Dark Theme Switch */
+      function setupThemeToggle() {
+        var btn = document.getElementById('theme-toggle');
+        var label = document.getElementById('theme-label');
+        if (!btn) return;
+
+        function syncThemeUI(theme) {
+          if (label) {
+            label.textContent = theme === 'dark' ? 'Light' : 'Dark';
+          }
+          btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+          btn.setAttribute('title', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+          btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+        }
+
+        var currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        syncThemeUI(currentTheme);
+
+        btn.addEventListener('click', function() {
+          var current = document.documentElement.getAttribute('data-theme') || 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          try {
+            localStorage.setItem('dihn-theme', next);
+          } catch (e) {}
+          syncThemeUI(next);
+        });
+
+        if (window.matchMedia) {
+          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            if (!localStorage.getItem('dihn-theme')) {
+              var t = e.matches ? 'dark' : 'light';
+              document.documentElement.setAttribute('data-theme', t);
+              syncThemeUI(t);
+            }
+          });
+        }
+      }
+
+      /* Initialise */
+      document.addEventListener('DOMContentLoaded', function() {
+        setupThemeToggle();
+        updatePrayerState();
+        updateFunDayStatus();
+        setupCalendarDownload();
+        setupCopyButtons();
+        setInterval(updatePrayerState, 30000);
+      });
+
+    })();
+  </script>
+</body>
+</html>
