@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Donate &amp; Support — Da'watul Islam Havering North</title>
+  <meta name="description" content="Support Da'watul Islam Havering North. Contribute towards operational costs (£1 a day), the permanent Masjid Purchase Fund, Sadaqah, and 100% Zakah.">
+  <meta name="theme-color" content="#2b2260">
+
+  <!-- Open Graph Preview -->
+  <meta property="og:title" content="Donate &amp; Support — Da'watul Islam Havering North">
+  <meta property="og:description" content="Support our daily prayer hub and help build a permanent masjid in Havering North. Online giving, bank details, and standing order guidance.">
+  <meta property="og:image" content="Logo.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Instant Theme Initialiser to Prevent Flash of Unstyled Theme (FOUC) -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('dihn-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- ===================================================================
+       SUMUP DONATION LINKS CONFIGURATION
+       Easily replace placeholder URLs below with live SumUp links.
+       =================================================================== -->
+  <script>
+    const DONATION_LINKS = {
+      masjid: {
+        5: "SUMUP_LINK_HERE",
+        10: "SUMUP_LINK_HERE",
+        20: "SUMUP_LINK_HERE",
+        50: "SUMUP_LINK_HERE",
+        other: "SUMUP_LINK_HERE"
+      },
+      sadaqah: {
+        5: "SUMUP_LINK_HERE",
+        10: "SUMUP_LINK_HERE",
+        20: "SUMUP_LINK_HERE",
+        50: "SUMUP_LINK_HERE",
+        other: "SUMUP_LINK_HERE"
+      },
+      zakah: {
+        10: "SUMUP_LINK_HERE",
+        20: "SUMUP_LINK_HERE",
+        50: "SUMUP_LINK_HERE",
+        100: "SUMUP_LINK_HERE",
+        other: "SUMUP_LINK_HERE"
+      }
+    };
+  </script>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Reem+Kufi:wght@600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand-link" href="index.html" aria-label="Da'watul Islam Havering North Homepage">
+        <div class="brand-logo-badge">
+          <img src="Logo.jpg" alt="Da'watul Islam Havering North Logo" width="46" height="46">
+        </div>
+        <div>
+          <span class="brand-name">Da'watul Islam Havering North</span>
+          <span class="brand-loc">Masjid &amp; Community, Romford</span>
+        </div>
+      </a>
+      <div class="header-right">
+        <nav class="header-nav" aria-label="Main Navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#prayers">Prayers</a>
+          <a href="index.html#jumuah">Friday Jumu'ah</a>
+          <a href="services.html">Services &amp; Classes</a>
+          <a href="donate.html" class="nav-active">Donate</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn nav-join-btn btn-small" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank" rel="noopener">Join WhatsApp</a>
+        </nav>
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Switch to dark mode" title="Switch theme" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+          <span class="theme-label" id="theme-label">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- SUBPAGE HERO: Golden Dusk Sky with Star Lattice & Arabic Watermark -->
+    <section class="hero hero-compact" id="hero-sky">
+      <svg class="hero-sky-svg" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="sky-linear" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2b2260" />
+            <stop offset="26%" stop-color="#462854" />
+            <stop offset="58%" stop-color="#c4603a" />
+            <stop offset="100%" stop-color="#f0a14e" />
+          </linearGradient>
+          <radialGradient id="sky-radial" cx="50%" cy="74%" r="55%" fx="50%" fy="74%">
+            <stop offset="0%" stop-color="rgba(240, 161, 78, 0.45)" />
+            <stop offset="100%" stop-color="rgba(240, 161, 78, 0)" />
+          </radialGradient>
+        </defs>
+        <rect width="100" height="100" fill="url(#sky-linear)" />
+        <rect width="100" height="100" fill="url(#sky-radial)" style="mix-blend-mode: screen;" />
+      </svg>
+
+      <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/clouds-mp4-poster.jpg" aria-hidden="true">
+        <source src="assets/clouds-mp4.mp4" type="video/mp4">
+      </video>
+
+      <div class="hero-dark-scrim" aria-hidden="true"></div>
+
+      <svg class="hero-lattice-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="star-lattice-pattern" width="180" height="180" patternUnits="userSpaceOnUse">
+            <rect class="lattice-path" x="54" y="54" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="54" y="54" width="72" height="72" transform="rotate(45 90 90)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="-36" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="-36" width="72" height="72" transform="rotate(45 0 0)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="-36" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="-36" width="72" height="72" transform="rotate(45 180 0)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="144" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="144" width="72" height="72" transform="rotate(45 0 180)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="144" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="144" width="72" height="72" transform="rotate(45 180 180)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="90" y1="0" x2="90" y2="40" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="90" y1="140" x2="90" y2="180" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="0" y1="90" x2="40" y2="90" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="140" y1="90" x2="180" y2="90" stroke="currentColor" stroke-width="1.2" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#star-lattice-pattern)" />
+      </svg>
+
+      <svg class="hero-arabic-svg" aria-hidden="true" viewBox="0 0 800 240">
+        <text x="780" y="190" text-anchor="end" class="arabic-svg-text">دعوة الإسلام</text>
+      </svg>
+
+      <div class="wrap">
+        <div class="hero-content">
+          <h1 class="subpage-hero-title">Support the Masjid</h1>
+          <p class="subpage-hero-hadith">
+            "When a human dies, their actions come to an end except for three: ongoing charity (Sadaqah Jariyah), beneficial knowledge, or a righteous child who prays for them." &mdash; Sahih Muslim
+          </p>
+          <div style="margin-top: 6px;">
+            <a class="btn btn-hero-gold" href="#online-giving">Donate online now &darr;</a>
+          </div>
+          <div class="subpage-hero-nav">
+            <a class="hero-jump-pill" href="#online-giving">Online Giving</a>
+            <a class="hero-jump-pill" href="#appeals">The Two Appeals</a>
+            <a class="hero-jump-pill" href="#bank-transfer">Bank Details</a>
+            <a class="hero-jump-pill" href="#standing-order">Standing Order Guide</a>
+            <a class="hero-jump-pill" href="#faq">Zakah &amp; FAQs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: INTERACTIVE ONLINE GIVING PORTAL -->
+    <section class="page-section" id="online-giving">
+      <div class="wrap">
+        <h2>Online card donation</h2>
+        <p class="lead">Select your cause and donation amount below. Fast, secure online checkout powered by SumUp.</p>
+
+        <div class="giving-portal-grid">
+          <div class="giving-portal-card">
+            <!-- Cause Selection Tabs -->
+            <div class="cause-tab-list" role="tablist" aria-label="Select donation cause">
+              <button type="button" class="cause-tab-btn is-active" id="tab-masjid" role="tab" aria-selected="true" aria-controls="panel-masjid" data-cause="masjid">
+                <span>Masjid Fund</span>
+                <small>Daily running costs &amp; permanent building</small>
+              </button>
+              <button type="button" class="cause-tab-btn" id="tab-sadaqah" role="tab" aria-selected="false" aria-controls="panel-sadaqah" data-cause="sadaqah">
+                <span>Sadaqah</span>
+                <small>Voluntary charity for community welfare</small>
+              </button>
+              <button type="button" class="cause-tab-btn" id="tab-zakah" role="tab" aria-selected="false" aria-controls="panel-zakah" data-cause="zakah">
+                <span>Zakah</span>
+                <small>100% dedicated distribution to eligible recipients</small>
+              </button>
+            </div>
+
+            <!-- Cause Description Notice -->
+            <div id="cause-desc-box">
+              <p id="cause-desc-text" style="font-size: var(--step-body); color: var(--ink-dark); margin-bottom: 8px;">
+                Supports daily congregational prayers, heating, utilities at Farringdon Grove, and our permanent Masjid Purchase Fund.
+              </p>
+            </div>
+
+            <!-- Preset Amount Buttons -->
+            <div class="giving-amounts-row" id="amounts-container">
+              <!-- Populated by JavaScript according to active cause -->
+            </div>
+
+            <!-- Action & Confirmation -->
+            <div class="giving-action-row">
+              <div>
+                <span class="giving-guarantee-note">
+                  Da'watul Islam UK &amp; Eire Ltd &bull; Registered Charity No. 1186155 &bull; Safe &amp; verified giving
+                </span>
+              </div>
+              <div>
+                <button type="button" class="btn btn-gold" id="btn-proceed-donation">
+                  Donate <span id="btn-selected-amt-label">&pound;20</span> now &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="giving-portal-media">
+            <img src="assets/twelve-point-star-tile.jpg" alt="14th-century twelve-point star tile representing sacred generosity" width="380" height="420">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE TWO CORE APPEALS -->
+    <section class="page-section" id="appeals" style="background: var(--surface-warm-alt);">
+      <div class="wrap">
+        <h2>The two core appeals</h2>
+        <p class="lead">Your generosity sustains daily worship today and secures a permanent spiritual home for tomorrow.</p>
+
+        <div class="support-asymmetric-banner">
+          <div class="support-column-left">
+            <div>
+              <h3>Operational costs</h3>
+              <p>Maintains daily rent, heating, electricity, cleaning, and essential running costs for our prayer hub at Unit 12 Farringdon Grove.</p>
+              <div class="support-amount-highlight">&pound;1 a day (&pound;30 a month)</div>
+              <p style="font-size: var(--step-small); color: var(--ink-dark-muted); margin: 0;">Regular small contributions keep the doors open 7 days a week for every salah.</p>
+            </div>
+            <div>
+              <a class="btn btn-dark btn-small" href="#bank-transfer">Set up standing order &rarr;</a>
+            </div>
+          </div>
+
+          <div class="support-column-right">
+            <div>
+              <h3>Masjid Purchase Fund</h3>
+              <p>Dedicated capital fund towards purchasing a permanent masjid building and community center for Havering North.</p>
+              <div style="border-radius: 4px; overflow: hidden; height: 160px; margin: 12px 0;">
+                <img src="assets/tile-from-a-squinch.jpg" alt="Sacred architectural squinch tile representing permanent masjid building" style="width: 100%; height: 100%; object-fit: cover; display: block;" width="400" height="160">
+              </div>
+              <div class="support-amount-highlight">&pound;1,000+ pledge</div>
+              <p style="font-size: var(--step-small); color: rgba(255, 255, 255, 0.85); margin: 0;">A priceless Sadaqah Jariyah establishing a house of Allah that will serve our children and grandchildren.</p>
+            </div>
+            <div>
+              <a class="btn btn-gold btn-small" href="#bank-transfer">Pledge &amp; transfer &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: BANK DETAILS & STANDING ORDER -->
+    <section class="page-section" id="bank-transfer">
+      <div class="wrap">
+        <h2>Bank transfer &amp; Standing orders</h2>
+        <p class="lead">Direct bank transfers carry 0% transaction fees, ensuring 100% of your gift goes directly to the masjid and community.</p>
+
+        <div class="split-picture-layout">
+          <div class="bank-details-box" style="margin-top: 0;">
+            <h3>Official charity bank account</h3>
+            <p>Please use online banking or visit your branch to set up a monthly standing order or make a one-off transfer.</p>
+
+            <div class="bank-ledger-table">
+              <div class="bank-ledger-row">
+                <div>
+                  <span class="bank-item-label">Account Name</span>
+                  <span class="bank-item-value" style="font-size: var(--step-lead);">DAWATUL ISLAM UK &amp; EIRE LTD</span>
+                </div>
+              </div>
+
+              <div class="bank-ledger-row">
+                <div>
+                  <span class="bank-item-label">Sort Code</span>
+                  <span class="bank-item-value" id="val-sort-code">20-31-52</span>
+                </div>
+                <button class="copy-btn" id="btn-copy-sort" type="button" aria-label="Copy sort code 20-31-52">Copy</button>
+              </div>
+
+              <div class="bank-ledger-row">
+                <div>
+                  <span class="bank-item-label">Account Number</span>
+                  <span class="bank-item-value" id="val-acc-num">23032523</span>
+                </div>
+                <button class="copy-btn" id="btn-copy-acc" type="button" aria-label="Copy account number 23032523">Copy</button>
+              </div>
+
+              <div class="bank-ledger-row">
+                <div>
+                  <span class="bank-item-label">Payment Reference</span>
+                  <span class="bank-item-value" style="font-size: var(--step-lead);">Your Name / Cause</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Standing order semantic guide -->
+            <div class="standing-order-guide" id="standing-order">
+              <h4 style="margin: 0; font-size: var(--step-lead); color: var(--ink-dark);">How to set up a standing order in your banking app</h4>
+              <ol>
+                <li><strong>Open your mobile banking app:</strong> Select "Pay &amp; Transfer", choose "Set up a standing order" or "Regular payment".</li>
+                <li><strong>Enter our charity details:</strong> Sort Code <strong>20-31-52</strong>, Account Number <strong>23032523</strong>, and Account Name <strong>DAWATUL ISLAM UK &amp; EIRE LTD</strong>.</li>
+                <li><strong>Choose your regular amount:</strong> Select monthly frequency (&pound;30/month for operational costs or your chosen contribution), using your name and cause as reference.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="split-picture-media">
+            <img src="assets/square-tile.jpg" alt="Historic Islamic ceramic tile with arabesque motifs" width="400" height="480">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TRUST, ZAKAH POLICY & FAQS -->
+    <section class="page-section" id="faq">
+      <div class="wrap">
+        <h2>Charity governance &amp; FAQs</h2>
+        <p class="lead">Complete financial integrity, 100% Zakah policy, and registered UK charity accountability.</p>
+
+        <div class="split-picture-layout">
+          <ul class="faq-ledger-list" style="margin-top: 0;">
+            <li class="faq-ledger-item">
+              <h3>100% Zakah Policy</h3>
+              <p>We operate a strict 100% Zakah policy. Zero administrative costs or overheads are deducted from your Zakah contributions. Every single pound is distributed directly to verified, eligible recipients in need according to Islamic guidelines.</p>
+            </li>
+
+            <li class="faq-ledger-item">
+              <h3>Registered UK Charity</h3>
+              <p>Da'watul Islam Havering North is a project of <strong>Da'watul Islam UK &amp; Eire Ltd</strong>, a registered charity in England &amp; Wales (Charity Commission Registration No. 1186155). All donations are handled in full compliance with UK charity law.</p>
+            </li>
+
+            <li class="faq-ledger-item">
+              <h3>Can I set up &pound;1 a day via Standing Order?</h3>
+              <p>Yes, absolutely. Setting up a monthly standing order of &pound;30 is the most effective and sustainable way to support the daily running costs of our Farringdon Grove hub, ensuring our doors remain open for all five prayers 365 days a year.</p>
+            </li>
+
+            <li class="faq-ledger-item">
+              <h3>How do I confirm my bank transfer?</h3>
+              <p>If you would like a receipt or confirmation for a bank transfer or pledge towards the Masjid Purchase Fund, simply drop a quick message with your transfer reference to our team via our WhatsApp community channel or at prayer times.</p>
+            </li>
+          </ul>
+
+          <div class="split-picture-media">
+            <img src="assets/decorated-bookbinding.jpg" alt="Historic gilded bookbinding representing sacred trust and accountability" width="400" height="480">
+          </div>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center;">
+          <a class="btn btn-dark" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank" rel="noopener">
+            Contact us on WhatsApp for donation queries
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h3 style="color: var(--accent-gold); margin-bottom: 12px; font-size: var(--step-h2);">Da'watul Islam Havering North</h3>
+          <p>A welcoming masjid community in Havering North, serving Harold Hill, Romford and surrounding neighbourhoods.</p>
+        </div>
+        <div>
+          <h3 style="color: var(--accent-gold); margin-bottom: 12px; font-size: var(--step-h2);">Quick Links</h3>
+          <p style="margin: 0; line-height: 2;">
+            <a href="index.html">Home</a> &bull; 
+            <a href="index.html#prayers">Prayer times</a> &bull; 
+            <a href="index.html#jumuah">Friday Jumu'ah</a> &bull; 
+            <a href="services.html">Services &amp; Classes</a> &bull; 
+            <a href="donate.html">Support the masjid</a> &bull; 
+            <a href="index.html#contact">Contact &amp; Visit</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-charity-note">
+        &copy; 2026 Da'watul Islam Havering North. A project of Da'watul Islam UK &amp; Eire (Registered Charity No. 1186155).
+      </div>
+      <p class="footer-credits">Pictures and footage: <a href="https://images.nasa.gov/details/GSFC_20141113_Volcanoes_m10183_Degassing_Clouds">"How Do Active Volcanoes Change Clouds"</a> via NASA Image and Video Library; <a href="https://www.metmuseum.org/art/collection/search/451699">"Planispheric Astrolabe"</a> by Muhammad Zaman al-Asturlabi (1065 AH), <a href="https://www.metmuseum.org/art/collection/search/452772">"Square Tile"</a> and <a href="https://www.metmuseum.org/art/collection/search/447256">"Tile from a Squinch"</a> via The Metropolitan Museum of Art (CC0); <a href="https://www.artic.edu/artworks/86467">"Twelve-Point Star Tile"</a> and <a href="https://www.artic.edu/artworks/13145">"Decorated Bookbinding"</a> via Art Institute of Chicago (CC0).</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT ENGINE -->
+  <script>
+    (function() {
+      'use strict';
+
+      /* 1. Theme Toggle */
+      function setupThemeToggle() {
+        var btn = document.getElementById('theme-toggle');
+        var label = document.getElementById('theme-label');
+        if (!btn) return;
+
+        function syncThemeUI(theme) {
+          if (label) label.textContent = theme === 'dark' ? 'Light' : 'Dark';
+          btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+          btn.setAttribute('title', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+          btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+        }
+
+        var currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        syncThemeUI(currentTheme);
+
+        btn.addEventListener('click', function() {
+          var current = document.documentElement.getAttribute('data-theme') || 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          try {
+            localStorage.setItem('dihn-theme', next);
+          } catch (e) {}
+          syncThemeUI(next);
+        });
+      }
+
+      /* 2. Tap-to-Copy Bank Details */
+      function setupCopyButtons() {
+        function attachCopy(btnId, valId) {
+          var btn = document.getElementById(btnId);
+          var val = document.getElementById(valId);
+          if (!btn || !val) return;
+
+          btn.addEventListener('click', function() {
+            var rawText = val.textContent.trim().replace(/-/g, '');
+            navigator.clipboard.writeText(rawText).then(function() {
+              btn.textContent = 'Copied!';
+              btn.classList.add('copied');
+              setTimeout(function() {
+                btn.textContent = 'Copy';
+                btn.classList.remove('copied');
+              }, 2000);
+            }).catch(function() {
+              btn.textContent = 'Copied!';
+            });
+          });
+        }
+
+        attachCopy('btn-copy-sort', 'val-sort-code');
+        attachCopy('btn-copy-acc', 'val-acc-num');
+      }
+
+      /* 3. Interactive Giving Portal Logic */
+      function setupGivingPortal() {
+        var currentCause = 'masjid';
+        var selectedAmount = 20;
+
+        var CAUSES = {
+          masjid: {
+            title: 'Masjid Fund',
+            desc: 'Supports daily congregational prayers, heating, utilities at Farringdon Grove, and our permanent Masjid Purchase Fund.',
+            amounts: [5, 10, 20, 50, 'Other']
+          },
+          sadaqah: {
+            title: 'Sadaqah',
+            desc: 'Voluntary charity for community welfare, educational materials, and neighbourhood support.',
+            amounts: [5, 10, 20, 50, 'Other']
+          },
+          zakah: {
+            title: 'Zakah (100% Policy)',
+            desc: 'Strictly 100% dedicated distribution to eligible recipients in need, with zero administrative deductions.',
+            amounts: [10, 20, 50, 100, 'Other']
+          }
+        };
+
+        var tabs = document.querySelectorAll('.cause-tab-btn');
+        var descText = document.getElementById('cause-desc-text');
+        var amountsContainer = document.getElementById('amounts-container');
+        var proceedBtn = document.getElementById('btn-proceed-donation');
+        var selectedLabel = document.getElementById('btn-selected-amt-label');
+
+        function renderAmounts() {
+          if (!amountsContainer) return;
+          amountsContainer.innerHTML = '';
+          var config = CAUSES[currentCause];
+
+          config.amounts.forEach(function(amt) {
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'giving-amt-btn';
+            if (amt === selectedAmount) {
+              btn.classList.add('is-selected');
+            }
+
+            if (typeof amt === 'number') {
+              btn.innerHTML = '&pound;' + amt;
+            } else {
+              btn.textContent = amt;
+            }
+
+            btn.addEventListener('click', function() {
+              selectedAmount = amt;
+              document.querySelectorAll('.giving-amt-btn').forEach(function(b) {
+                b.classList.remove('is-selected');
+              });
+              btn.classList.add('is-selected');
+
+              if (selectedLabel) {
+                selectedLabel.textContent = typeof amt === 'number' ? ('£' + amt) : 'custom amount';
+              }
+            });
+
+            amountsContainer.appendChild(btn);
+          });
+
+          if (selectedLabel) {
+            selectedLabel.textContent = typeof selectedAmount === 'number' ? ('£' + selectedAmount) : 'custom amount';
+          }
+        }
+
+        tabs.forEach(function(tab) {
+          tab.addEventListener('click', function() {
+            tabs.forEach(function(t) {
+              t.classList.remove('is-active');
+              t.setAttribute('aria-selected', 'false');
+            });
+            tab.classList.add('is-active');
+            tab.setAttribute('aria-selected', 'true');
+
+            currentCause = tab.getAttribute('data-cause');
+            if (descText && CAUSES[currentCause]) {
+              descText.textContent = CAUSES[currentCause].desc;
+            }
+
+            selectedAmount = (currentCause === 'zakah') ? 50 : 20;
+            renderAmounts();
+          });
+        });
+
+        if (proceedBtn) {
+          proceedBtn.addEventListener('click', function() {
+            var links = (typeof DONATION_LINKS !== 'undefined' && DONATION_LINKS[currentCause]) ? DONATION_LINKS[currentCause] : {};
+            var url = links[selectedAmount] || links.other;
+            var causeName = CAUSES[currentCause] ? CAUSES[currentCause].title : 'Masjid';
+            var amtStr = typeof selectedAmount === 'number' ? ('£' + selectedAmount) : 'custom amount';
+
+            if (!url || url === 'SUMUP_LINK_HERE' || url.indexOf('http') !== 0) {
+              alert('SumUp payment link for ' + causeName + ' (' + amtStr + ') will open here once configured. You can also donate using our direct bank transfer details below.');
+              var bankSection = document.getElementById('bank-transfer');
+              if (bankSection) {
+                bankSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            } else {
+              window.open(url, '_blank', 'noopener,noreferrer');
+            }
+          });
+        }
+
+        renderAmounts();
+      }
+
+      /* Initialise */
+      document.addEventListener('DOMContentLoaded', function() {
+        setupThemeToggle();
+        setupCopyButtons();
+        setupGivingPortal();
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Services &amp; Community — Da'watul Islam Havering North</title>
+  <meta name="description" content="Discover worship, Qur'an classes, Sisters' Circle, new Muslim support, and bereavement services at Da'watul Islam Havering North.">
+  <meta name="theme-color" content="#2b2260">
+
+  <!-- Open Graph Preview -->
+  <meta property="og:title" content="Services &amp; Community — Da'watul Islam Havering North">
+  <meta property="og:description" content="Qur'an classes, Sisters' Circle, funeral support, new Muslim guidance, and neighbourhood services in Havering North.">
+  <meta property="og:image" content="Logo.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Instant Theme Initialiser to Prevent Flash of Unstyled Theme (FOUC) -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('dihn-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Reem+Kufi:wght@600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand-link" href="index.html" aria-label="Da'watul Islam Havering North Homepage">
+        <div class="brand-logo-badge">
+          <img src="Logo.jpg" alt="Da'watul Islam Havering North Logo" width="46" height="46">
+        </div>
+        <div>
+          <span class="brand-name">Da'watul Islam Havering North</span>
+          <span class="brand-loc">Masjid &amp; Community, Romford</span>
+        </div>
+      </a>
+      <div class="header-right">
+        <nav class="header-nav" aria-label="Main Navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#prayers">Prayers</a>
+          <a href="index.html#jumuah">Friday Jumu'ah</a>
+          <a href="services.html" class="nav-active">Services &amp; Classes</a>
+          <a href="donate.html">Donate</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn nav-join-btn btn-small" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank" rel="noopener">Join WhatsApp</a>
+        </nav>
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Switch to dark mode" title="Switch theme" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+          <span class="theme-label" id="theme-label">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- SUBPAGE HERO -->
+    <section class="hero hero-compact" id="hero-sky">
+      <svg class="hero-sky-svg" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="sky-linear" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2b2260" />
+            <stop offset="26%" stop-color="#462854" />
+            <stop offset="58%" stop-color="#c4603a" />
+            <stop offset="100%" stop-color="#f0a14e" />
+          </linearGradient>
+          <radialGradient id="sky-radial" cx="50%" cy="74%" r="55%" fx="50%" fy="74%">
+            <stop offset="0%" stop-color="rgba(240, 161, 78, 0.45)" />
+            <stop offset="100%" stop-color="rgba(240, 161, 78, 0)" />
+          </radialGradient>
+        </defs>
+        <rect width="100" height="100" fill="url(#sky-linear)" />
+        <rect width="100" height="100" fill="url(#sky-radial)" style="mix-blend-mode: screen;" />
+      </svg>
+
+      <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/clouds-mp4-poster.jpg" aria-hidden="true">
+        <source src="assets/clouds-mp4.mp4" type="video/mp4">
+      </video>
+
+      <div class="hero-dark-scrim" aria-hidden="true"></div>
+
+      <svg class="hero-lattice-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="star-lattice-pattern" width="180" height="180" patternUnits="userSpaceOnUse">
+            <rect class="lattice-path" x="54" y="54" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="54" y="54" width="72" height="72" transform="rotate(45 90 90)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="-36" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="-36" width="72" height="72" transform="rotate(45 0 0)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="-36" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="-36" width="72" height="72" transform="rotate(45 180 0)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="144" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="144" width="72" height="72" transform="rotate(45 0 180)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="144" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="144" width="72" height="72" transform="rotate(45 180 180)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="90" y1="0" x2="90" y2="40" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="90" y1="140" x2="90" y2="180" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="0" y1="90" x2="40" y2="90" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="140" y1="90" x2="180" y2="90" stroke="currentColor" stroke-width="1.2" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#star-lattice-pattern)" />
+      </svg>
+
+      <svg class="hero-arabic-svg" aria-hidden="true" viewBox="0 0 800 240">
+        <text x="780" y="190" text-anchor="end" class="arabic-svg-text">دعوة الإسلام</text>
+      </svg>
+
+      <div class="wrap">
+        <div class="hero-content">
+          <h1 class="subpage-hero-title">Services &amp; Classes</h1>
+          <p class="hero-tagline">
+            Serving Harold Hill, Romford, and Havering North with dedicated worship, authentic Islamic education, and practical community support.
+          </p>
+          <div style="margin-top: 6px;">
+            <a class="btn btn-hero-gold" href="#classes">View Classes &amp; Timetable &rarr;</a>
+          </div>
+          <div class="subpage-hero-nav">
+            <a class="hero-jump-pill" href="#classes">Qur'an &amp; Learning</a>
+            <a class="hero-jump-pill" href="#circles">Sisters' Circle</a>
+            <a class="hero-jump-pill" href="#pastoral">Pastoral Care</a>
+            <a class="hero-jump-pill" href="#about">About DIHN</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: WHAT'S ON & CLASSES -->
+    <section class="page-section" id="classes">
+      <div class="wrap">
+        <h2>What's on &amp; Classes</h2>
+        <p class="lead">Structured learning, study circles, and warm gatherings for all ages across Havering North.</p>
+
+        <div class="activities-editorial-layout">
+          <article class="activity-feature-card">
+            <div class="activity-feature-img">
+              <img src="assets/decorated-bookbinding.jpg" alt="Gilded Islamic manuscript bookbinding representing Qur'an and sacred studies" width="600" height="260">
+            </div>
+            <div class="activity-feature-content">
+              <span class="activity-tag-label">Weekly Learning</span>
+              <h3>Qur'an &amp; Islamic Studies</h3>
+              <p>Patient, structured classes in Arabic letter recognition, fluent recitation, tajweed, and foundational Islamic etiquette for children and adults at our Farringdon Grove hub.</p>
+              <p style="margin: 0; color: var(--ink-dark-muted); font-size: var(--step-small);">Open to all levels from complete beginners to advanced readers.</p>
+            </div>
+          </article>
+
+          <div class="activities-side-stack" id="circles">
+            <article class="activity-row-item">
+              <div class="activity-thumb">
+                <img src="assets/square-tile.jpg" alt="12th-century ceramic tile with foliate motifs" width="84" height="84">
+              </div>
+              <div>
+                <span class="activity-tag-label">Weekly Gathering</span>
+                <h3 style="margin: 2px 0 4px 0; font-size: var(--step-h2);">Sisters' Circle</h3>
+                <p style="margin: 0; color: var(--ink-dark-muted); font-size: var(--step-body);">A dedicated, supportive environment for sisters to learn, reflect, share knowledge, and build lifelong friendships.</p>
+              </div>
+            </article>
+
+            <article class="activity-row-item">
+              <div class="activity-thumb">
+                <img src="assets/twelve-point-star-tile.jpg" alt="Timurid twelve-point star tile with lapis glaze" width="84" height="84">
+              </div>
+              <div>
+                <span class="activity-tag-label">Community Gatherings</span>
+                <h3 style="margin: 2px 0 4px 0; font-size: var(--step-h2);">Community Iftars &amp; Open Days</h3>
+                <p style="margin: 0; color: var(--ink-dark-muted); font-size: var(--step-body);">Welcoming families, friends, and neighbours across Havering North. Regular schedules announced in our WhatsApp group.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="facebook-notice-bar">
+          <div>
+            <strong style="font-size: var(--step-lead); color: var(--ink-dark);">Stay up to date with notices &amp; programmes</strong>
+            <p style="margin: 2px 0 0 0; color: var(--ink-dark-muted);">Follow our official Facebook page for announcements, photo recaps and community updates.</p>
+          </div>
+          <a class="btn btn-dark btn-small" href="https://www.facebook.com/DIHNorth" target="_blank" rel="noopener">Follow DIHN on Facebook</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PASTORAL SERVICES -->
+    <section class="page-section" id="pastoral" style="background: var(--surface-warm-alt);">
+      <div class="wrap">
+        <h2>Pastoral care &amp; Services</h2>
+        <p class="lead">Supporting families through every stage of life in Harold Hill, Romford, and surrounding areas.</p>
+
+        <div class="services-layout-grid">
+          <ul class="services-ledger-list">
+            <li class="service-row-item">
+              <h3>Daily prayers &amp; Friday Jumu'ah</h3>
+              <p>Five daily congregational prayers at Unit 12 Farringdon Grove, and Friday Jumu'ah khutbah and salah at Rockchase Sport Centre.</p>
+            </li>
+            <li class="service-row-item">
+              <h3>Qur'an reading, tajweed &amp; Islamic studies</h3>
+              <p>Structured, patient learning for children and adults, from learning Arabic letters to fluent recitation and core understanding.</p>
+            </li>
+            <li class="service-row-item">
+              <h3>A friendly point of contact for new Muslims</h3>
+              <p>Support, companionship, and guidance for anyone who has embraced Islam or is exploring faith. No question is too basic.</p>
+            </li>
+            <li class="service-row-item">
+              <h3>Funerals and janazah support</h3>
+              <p>Compassionate guidance, arrangement assistance, and bereavement support for families across the borough.</p>
+            </li>
+            <li class="service-row-item">
+              <h3>Youth and sisters activities</h3>
+              <p>Regular study circles, social gatherings, youth sports, and family outings that build strong neighbourhood ties.</p>
+            </li>
+            <li class="service-row-item">
+              <h3>Community advice &amp; signposting</h3>
+              <p>Confidential advice, signposting to local borough services, and practical neighbourhood assistance.</p>
+            </li>
+          </ul>
+
+          <div class="services-illustration-pane">
+            <img src="assets/astrolabe-jpg.jpg" alt="Planispheric Astrolabe dated 1065 AH by Muhammad Zaman al-Asturlabi, representing historical Islamic celestial timekeeping" width="480" height="520">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: ABOUT DA'WATUL ISLAM -->
+    <section class="page-section" id="about">
+      <div class="wrap">
+        <h2>About us</h2>
+        <div class="about-split-grid">
+          <div class="about-lead-box">
+            <p>A community of Muslims in Havering North who come together to worship, learn and look after one another, with doors open to the wider neighbourhood.</p>
+            <p class="about-charity-meta">Da'watul Islam Havering North is a project of <strong>Da'watul Islam UK &amp; Eire</strong> (Registered Charity No. 1186155). We are committed to serving families, young people, elders and neighbours with warmth, mutual respect and open hearts.</p>
+            <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px;">
+              <a class="btn btn-dark btn-small" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank" rel="noopener">Join WhatsApp Community</a>
+              <a class="btn btn-gold btn-small" href="donate.html">Support the Masjid</a>
+            </div>
+          </div>
+          <div class="about-tile-wrap">
+            <img src="assets/square-tile.jpg" alt="Historic Islamic ceramic tile with intricate arabesque design" width="450" height="320">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FLOATING STICKY DONATE BUTTON -->
+  <a href="donate.html" class="floating-donate-btn" aria-label="Donate to Da'watul Islam Havering North">
+    <svg class="floating-donate-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+    <span class="donate-btn-label">Donate</span>
+  </a>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h3 style="color: var(--accent-gold); margin-bottom: 12px; font-size: var(--step-h2);">Da'watul Islam Havering North</h3>
+          <p>A welcoming masjid community in Havering North, serving Harold Hill, Romford and surrounding neighbourhoods.</p>
+        </div>
+        <div>
+          <h3 style="color: var(--accent-gold); margin-bottom: 12px; font-size: var(--step-h2);">Quick Links</h3>
+          <p style="margin: 0; line-height: 2;">
+            <a href="index.html">Home</a> &bull; 
+            <a href="index.html#prayers">Prayer times</a> &bull; 
+            <a href="index.html#jumuah">Friday Jumu'ah</a> &bull; 
+            <a href="services.html">Services &amp; Classes</a> &bull; 
+            <a href="donate.html">Support the masjid</a> &bull; 
+            <a href="index.html#contact">Contact &amp; Visit</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-charity-note">
+        &copy; 2026 Da'watul Islam Havering North. A project of Da'watul Islam UK &amp; Eire (Registered Charity No. 1186155).
+      </div>
+      <p class="footer-credits">Pictures and footage: <a href="https://images.nasa.gov/details/GSFC_20141113_Volcanoes_m10183_Degassing_Clouds">"How Do Active Volcanoes Change Clouds"</a> via NASA Image and Video Library; <a href="https://www.metmuseum.org/art/collection/search/451699">"Planispheric Astrolabe"</a> by Muhammad Zaman al-Asturlabi (1065 AH), <a href="https://www.metmuseum.org/art/collection/search/452772">"Square Tile"</a> and <a href="https://www.metmuseum.org/art/collection/search/447256">"Tile from a Squinch"</a> via The Metropolitan Museum of Art (CC0); <a href="https://www.artic.edu/artworks/86467">"Twelve-Point Star Tile"</a> and <a href="https://www.artic.edu/artworks/13145">"Decorated Bookbinding"</a> via Art Institute of Chicago (CC0).</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT ENGINE -->
+  <script>
+    (function() {
+      'use strict';
+
+      /* Theme Toggle */
+      function setupThemeToggle() {
+        var btn = document.getElementById('theme-toggle');
+        var label = document.getElementById('theme-label');
+        if (!btn) return;
+
+        function syncThemeUI(theme) {
+          if (label) label.textContent = theme === 'dark' ? 'Light' : 'Dark';
+          btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+          btn.setAttribute('title', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+          btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+        }
+
+        var currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        syncThemeUI(currentTheme);
+
+        btn.addEventListener('click', function() {
+          var current = document.documentElement.getAttribute('data-theme') || 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          try {
+            localStorage.setItem('dihn-theme', next);
+          } catch (e) {}
+          syncThemeUI(next);
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        setupThemeToggle();
+      });
+    })();
+  </script>
+</body>
+</html>

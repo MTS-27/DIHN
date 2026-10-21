@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Da'watul Islam Havering North, Masjid &amp; Community</title>
+  <meta name="description" content="A welcoming masjid community in Havering North. Daily congregational prayers, Friday Jumu'ah at Rockchase Sport Centre, community classes, and neighbourhood support.">
+  <meta name="theme-color" content="#2b2260">
+
+  <!-- Open Graph Preview -->
+  <meta property="og:title" content="Da'watul Islam Havering North">
+  <meta property="og:description" content="A welcoming masjid community in Havering North. Daily prayers at Farringdon Grove and Friday Jumu'ah at Rockchase.">
+  <meta property="og:image" content="Logo.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Instant Theme Initialiser to Prevent Flash of Unstyled Theme (FOUC) -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('dihn-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Typography: Libre Franklin, Source Serif 4, Reem Kufi -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Reem+Kufi:wght@600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand-link" href="index.html" aria-label="Da'watul Islam Havering North Homepage">
+        <div class="brand-logo-badge">
+          <img src="Logo.jpg" alt="Da'watul Islam Havering North Logo" width="46" height="46">
+        </div>
+        <div>
+          <span class="brand-name">Da'watul Islam Havering North</span>
+          <span class="brand-loc">Masjid &amp; Community, Romford</span>
+        </div>
+      </a>
+      <div class="header-right">
+        <nav class="header-nav" aria-label="Main Navigation">
+          <a href="index.html" class="nav-active">Home</a>
+          <a href="#prayers">Prayers</a>
+          <a href="#jumuah">Friday Jumu'ah</a>
+          <a href="services.html">Services &amp; Classes</a>
+          <a href="donate.html">Donate</a>
+          <a href="#contact">Contact</a>
+          <a class="btn nav-join-btn btn-small" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank" rel="noopener">Join WhatsApp</a>
+        </nav>
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Switch to dark mode" title="Switch theme" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+          <span class="theme-label" id="theme-label">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO: Full-bleed golden-dusk sky with 8-pointed star lattice, prominent prayer headline, and Kufic Arabic watermark -->
+    <section class="hero" id="hero-sky">
+      <svg class="hero-sky-svg" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="sky-linear" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2b2260" />
+            <stop offset="26%" stop-color="#462854" />
+            <stop offset="58%" stop-color="#c4603a" />
+            <stop offset="100%" stop-color="#f0a14e" />
+          </linearGradient>
+          <radialGradient id="sky-radial" cx="50%" cy="74%" r="55%" fx="50%" fy="74%">
+            <stop offset="0%" stop-color="rgba(240, 161, 78, 0.45)" />
+            <stop offset="100%" stop-color="rgba(240, 161, 78, 0)" />
+          </radialGradient>
+        </defs>
+        <rect width="100" height="100" fill="url(#sky-linear)" />
+        <rect width="100" height="100" fill="url(#sky-radial)" style="mix-blend-mode: screen;" />
+      </svg>
+
+      <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/clouds-mp4-poster.jpg" aria-hidden="true">
+        <source src="assets/clouds-mp4.mp4" type="video/mp4">
+      </video>
+
+      <div class="hero-dark-scrim" aria-hidden="true"></div>
+
+      <svg class="hero-lattice-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="star-lattice-pattern" width="180" height="180" patternUnits="userSpaceOnUse">
+            <rect class="lattice-path" x="54" y="54" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="54" y="54" width="72" height="72" transform="rotate(45 90 90)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="-36" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="-36" width="72" height="72" transform="rotate(45 0 0)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="-36" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="-36" width="72" height="72" transform="rotate(45 180 0)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="144" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="-36" y="144" width="72" height="72" transform="rotate(45 0 180)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="144" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <rect class="lattice-path" x="144" y="144" width="72" height="72" transform="rotate(45 180 180)" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="90" y1="0" x2="90" y2="40" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="90" y1="140" x2="90" y2="180" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="0" y1="90" x2="40" y2="90" stroke="currentColor" stroke-width="1.2" />
+            <line class="lattice-path" x1="140" y1="90" x2="180" y2="90" stroke="currentColor" stroke-width="1.2" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#star-lattice-pattern)" />
+      </svg>
+
+      <svg class="hero-arabic-svg" aria-hidden="true" viewBox="0 0 800 240">
+        <text x="780" y="190" text-anchor="end" class="arabic-svg-text">دعوة الإسلام</text>
+      </svg>
+
+      <div class="wrap">
+        <div class="hero-content">
+          <h1 class="hero-masjid-h1">Da'watul Islam Havering North</h1>
+
+          <div class="hero-prayer-title-row">
+            <div class="hero-prayer-headline" id="next-prayer-name">Dhuhr</div>
+            <div class="hero-prayer-time" id="next-prayer-time">1:30 pm</div>
+          </div>
+
+          <div class="hero-countdown-block">
+            <span>Next Jamā'ah in</span>
+            <span class="countdown-digits" id="next-prayer-countdown">calculating...</span>
+            <span class="countdown-venue" id="next-prayer-location">at Farringdon Grove hub</span>
+          </div>
+
+          <p class="hero-tagline">Daily congregational prayers at Farringdon Grove and Friday Jumu'ah at Rockchase Sport Centre.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-hero-gold" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank" rel="noopener">
+              <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.06c-1.49 0-2.94-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.31a8.13 8.13 0 0 1-1.25-4.27c0-4.5 3.66-8.16 8.16-8.16 2.18 0 4.23.85 5.77 2.39a8.12 8.12 0 0 1 2.39 5.77c0 4.5-3.66 8.15-8.06 8.15z"/>
+              </svg>
+              <span>Join the WhatsApp group</span>
+            </a>
+            <a class="btn btn-hero-outline" href="#prayers">See prayer times</a>
+            <a class="hero-text-link" href="donate.html">Support the masjid &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRAYER TIMES STRIP (Pulled up to overlap hero by 64px) -->
+    <section class="prayer-times-section" id="prayers" aria-label="Daily Congregational Prayer Times">
+      <div class="wrap">
+        <div class="prayer-strip-panel" data-ui>
+          <div class="strip-header-row">
+            <div>
+              <h2 class="strip-heading">Prayer times</h2>
+              <div class="strip-meta-line">
+                <span id="prayer-display-date">Tuesday 20 October 2026</span>
+                <span class="meta-dot" aria-hidden="true">&bull;</span>
+                <span id="hijri-date-display" class="hijri-date-text">9 Jumada I 1448 AH</span>
+              </div>
+            </div>
+            <div class="strip-sunrise-group">
+              <span class="sunrise-label">Sunrise:</span>
+              <span class="sunrise-time-val" id="sunrise-time">7:32 am</span>
+            </div>
+          </div>
+
+          <div class="prayer-continuous-bar" role="region" aria-label="Daily congregational prayer times">
+            <div class="prayer-cell" id="col-fajr">
+              <span class="p-cell-name">Fajr</span>
+              <span class="p-cell-time" id="time-fajr">6:30 am</span>
+              <span class="p-cell-tag">Jamā'ah</span>
+            </div>
+            <div class="prayer-cell" id="col-dhuhr">
+              <span class="p-cell-name">Dhuhr</span>
+              <span class="p-cell-time" id="time-dhuhr">1:30 pm</span>
+              <span class="p-cell-tag">Jamā'ah</span>
+            </div>
+            <div class="prayer-cell" id="col-asr">
+              <span class="p-cell-name">Asr</span>
+              <span class="p-cell-time" id="time-asr">4:45 pm</span>
+              <span class="p-cell-tag">Jamā'ah</span>
+            </div>
+            <div class="prayer-cell" id="col-maghrib">
+              <span class="p-cell-name">Maghrib</span>
+              <span class="p-cell-time" id="time-maghrib">6:00 pm</span>
+              <span class="p-cell-tag">Jamā'ah</span>
+            </div>
+            <div class="prayer-cell" id="col-isha">
+              <span class="p-cell-name">Isha</span>
+              <span class="p-cell-time" id="time-isha">7:45 pm</span>
+              <span class="p-cell-tag">Jamā'ah</span>
+            </div>
+          </div>
+
+          <div class="strip-footer-note">
+            <span>All times are congregational jamā'ah times at Unit 12 Farringdon Grove (except Friday Jumu'ah at Rockchase).</span>
+            <span>The prayer hall opens 20 minutes before salah and closes 15 minutes after.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED EVENT -->
+    <section class="featured-event-band" id="featured-event-section">
+      <div class="wrap">
+        <h2>Featured event</h2>
+        <div class="event-banner-card" id="fun-day-banner">
+          <div class="event-poster-container">
+            <img src="Funday.jpg" alt="Family Fun Day poster showing stalls, bouncy castle and community activities at MyPlace Harold Hill" width="420" height="520">
+          </div>
+          <div class="event-details-pane">
+            <div>
+              <h3>Family Fun Day</h3>
+              <div class="event-status-row">
+                <span class="event-badge-tag" id="funday-countdown-badge">Saturday 24 October 2026</span>
+              </div>
+              <p>Free community gathering with stalls, a bouncy castle and free registered parking. Children under 18 must be accompanied by a parent or guardian. Everyone is welcome.</p>
+
+              <div class="event-facts-list">
+                <div><strong>Date &amp; Time:</strong> Saturday 24 October 2026, 12:00 pm to 5:00 pm</div>
+                <div><strong>Venue:</strong> MyPlace, 343 Dagnam Park Drive, Harold Hill, RM3 9EN</div>
+                <div><strong>Admission:</strong> Free entry &bull; Stalls &bull; Bouncy castle &bull; Free parking</div>
+              </div>
+            </div>
+
+            <div class="event-cta-row">
+              <button class="btn btn-event-gold" id="btn-add-calendar" type="button">Add to calendar (.ics)</button>
+              <a class="btn btn-event-outline" href="https://www.google.com/maps/search/?api=1&query=MyPlace+343+Dagnam+Park+Drive+Harold+Hill+RM3+9EN" target="_blank" rel="noopener">Directions to MyPlace</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRIDAY JUMU'AH -->
+    <section class="page-section" id="jumuah">
+      <div class="wrap">
+        <h2>Friday Jumu'ah</h2>
+        <p class="lead">Weekly Friday congregational prayers for Havering North.</p>
+
+        <div class="jumuah-grid">
+          <div class="jumuah-info-card">
+            <div class="jumuah-khutbah-banner">
+              <strong>Khutbah starts at 1:30 pm sharp every Friday</strong>
+              <span>Please arrive 10 to 15 minutes early to secure your space and settle into the hall.</span>
+            </div>
+
+            <ul class="jumuah-checklist">
+              <li class="jumuah-item">
+                <svg class="jumuah-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <div>
+                  <strong>Venue: Rockchase Sport Centre</strong>
+                  <p style="margin: 2px 0 0 0; color: var(--ink-dark-muted);">Creative House, Bryant Ave, Romford RM3 0AP (directly opposite Tesco on Bryant Avenue).</p>
+                </div>
+              </li>
+
+              <li class="jumuah-item">
+                <svg class="jumuah-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M9 17V7h4a3 3 0 0 1 0 6H9"/>
+                </svg>
+                <div>
+                  <strong>Parking: Use Tesco car park</strong>
+                  <p style="margin: 2px 0 0 0; color: var(--ink-dark-muted);">There is strictly no parking on Bryant Avenue road. Please use the Tesco car park opposite and car-share if you can.</p>
+                </div>
+              </li>
+
+              <li class="jumuah-item">
+                <svg class="jumuah-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <div>
+                  <strong>Separate area for sisters</strong>
+                  <p style="margin: 2px 0 0 0; color: var(--ink-dark-muted);">A dedicated, comfortable space is arranged for sisters every Friday.</p>
+                </div>
+              </li>
+
+              <li class="jumuah-item">
+                <svg class="jumuah-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                </svg>
+                <div>
+                  <strong>Please make wudu at home</strong>
+                  <p style="margin: 2px 0 0 0; color: var(--ink-dark-muted);">Ablution facilities at the sports centre are limited. Please perform your wudu before leaving home.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div>
+              <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Rockchase+Sport+Centre+Bryant+Ave+Romford+RM3+0AP" target="_blank" rel="noopener">Get directions to Rockchase</a>
+            </div>
+          </div>
+
+          <div class="jumuah-media-pane">
+            <div class="architectural-tile-box">
+              <img src="assets/tile-from-a-squinch.jpg" alt="14th-century architectural squinch tile representing sacred masjid architecture" width="500" height="200">
+            </div>
+            <div class="map-frame-box" aria-label="Interactive map for Rockchase Sport Centre">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.910398399581!2d0.22238467718919696!3d51.58819517183141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a4e8d3566163%3A0xe10850dfd7f766e4!2sRockchase%20Sport%20Centre!5e0!3m2!1sen!2suk!4v1729420000000!5m2!1sen!2suk" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Google Map showing Rockchase Sport Centre on Bryant Avenue, Romford">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY SERVICES PREVIEW (DECLUTTERED SPOTLIGHT LINKING TO SERVICES.HTML) -->
+    <section class="page-section" id="community-spotlight" style="background: var(--surface-warm-alt);">
+      <div class="wrap">
+        <h2>Community &amp; Services</h2>
+        <p class="lead">Classes, pastoral support, and neighbourhood gatherings across Harold Hill and Romford.</p>
+
+        <div class="services-home-preview">
+          <div>
+            <h3 style="color: var(--ink-dark); margin-bottom: 10px;">Qur'an classes, Sisters' Circle &amp; Pastoral Care</h3>
+            <p style="color: var(--ink-dark-muted); margin-bottom: 18px;">
+              From structured tajweed and children's madrasah to bereavement janazah support, new Muslim guidance, and warm sisters' study circles, our community programmes serve families across Havering North.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+              <a class="btn btn-dark" href="services.html">View all services &amp; classes &rarr;</a>
+              <a class="btn" style="background: var(--surface-warm); color: var(--ink-dark);" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank" rel="noopener">Join WhatsApp community</a>
+            </div>
+          </div>
+          <div style="border-radius: 6px; overflow: hidden; background: var(--navy-dark); height: 220px;">
+            <img src="assets/decorated-bookbinding.jpg" alt="Gilded bookbinding representing sacred learning" style="width: 100%; height: 100%; object-fit: cover; display: block;" width="400" height="220">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT THE MASJID (DECLUTTERED SPOTLIGHT LINKING TO DONATE.HTML) -->
+    <section class="page-section" id="donate">
+      <div class="wrap">
+        <h2>Support the masjid</h2>
+        <p class="lead">Your regular standing orders sustain daily congregational prayers and secure a permanent home for generations to come.</p>
+
+        <div class="support-home-spotlight">
+          <div class="support-spotlight-left">
+            <div>
+              <h3>Keep the doors open: &pound;1 a day</h3>
+              <p>
+                Our prayer hub at Unit 12 Farringdon Grove runs 365 days a year. Just &pound;30 a month covers rent, heating, electricity, and essential daily maintenance.
+              </p>
+              <div class="support-amount-highlight">&pound;30 a month (&pound;1/day)</div>
+              <p style="font-size: var(--step-small); color: var(--ink-dark-muted); margin: 0;">
+                Direct bank transfers carry 0% fees, ensuring 100% of your gift benefits the masjid.
+              </p>
+            </div>
+
+            <!-- Quick Copy Bank Strip -->
+            <div style="background: var(--surface-warm-alt); padding: 16px 20px; border-radius: 4px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;">
+              <div>
+                <span class="bank-item-label">Sort Code: <strong id="val-sort-code" style="color: var(--ink-dark); font-variant-numeric: tabular-nums;">20-31-52</strong></span>
+                <span class="bank-item-label">Account: <strong id="val-acc-num" style="color: var(--ink-dark); font-variant-numeric: tabular-nums;">23032523</strong></span>
+              </div>
+              <div style="display: flex; gap: 8px;">
+                <button class="copy-btn" id="btn-copy-sort" type="button" aria-label="Copy sort code">Copy Sort</button>
+                <button class="copy-btn" id="btn-copy-acc" type="button" aria-label="Copy account number">Copy Acc</button>
+              </div>
+            </div>
+
+            <div>
+              <a class="btn btn-dark" href="donate.html#bank-transfer">View full bank transfer details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="support-spotlight-right">
+            <div>
+              <h3>Masjid Purchase Fund</h3>
+              <p>
+                Dedicated capital fund towards acquiring a permanent masjid and community center for Havering North.
+              </p>
+              <div class="support-amount-highlight" style="color: var(--accent-gold);">&pound;1,000+ Pledge</div>
+              <p style="font-size: var(--step-small); color: rgba(255, 255, 255, 0.85); margin: 0;">
+                A continuous reward in the hereafter. We also facilitate 100% Zakah distribution with zero administrative overhead.
+              </p>
+            </div>
+
+            <div>
+              <a class="btn btn-gold" href="donate.html">Visit donation page &amp; online giving &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & VISIT -->
+    <section class="page-section" id="contact">
+      <div class="wrap">
+        <h2>Contact &amp; Visit</h2>
+        <div class="contact-unified-sheet">
+          <div>
+            <p class="lead" style="color: var(--ink-brand); font-weight: 600; margin-bottom: 8px;">Unit 12 Farringdon Grove, Harold Hill, Romford RM3 8TD</p>
+            <p>Everyone is welcome at prayer times. To arrange a visit outside congregational prayer times, please get in touch in advance.</p>
+            <p style="color: var(--ink-dark-muted);">Our WhatsApp group is the primary channel for daily notices, Friday Jumu'ah logistical updates, and community news.</p>
+
+            <div class="contact-actions">
+              <a class="btn btn-dark" href="https://chat.whatsapp.com/LmIkG4OpgAs2cD7IW89BFK" target="_blank" rel="noopener">Join WhatsApp community</a>
+              <a class="btn" style="background: var(--surface-warm-alt); color: var(--ink-dark);" href="https://www.facebook.com/DIHNorth" target="_blank" rel="noopener">Follow on Facebook</a>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="color: var(--ink-dark);">Weekly Hours &amp; Access</h3>
+            <p style="color: var(--ink-dark-muted);">The Farringdon Grove hub opens 20 minutes before each daily prayer and closes 15 minutes following congregation.</p>
+            <p style="margin: 0; color: var(--ink-dark-muted);">Friday Jumu'ah is held at Rockchase Sport Centre on Bryant Avenue (1:30 pm sharp).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FLOATING STICKY DONATE BUTTON (LINKS TO DONATE PAGE) -->
+  <a href="donate.html" class="floating-donate-btn" aria-label="Donate to Da'watul Islam Havering North">
+    <svg class="floating-donate-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+    <span class="donate-btn-label">Donate</span>
+  </a>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h3 style="color: var(--accent-gold); margin-bottom: 12px; font-size: var(--step-h2);">Da'watul Islam Havering North</h3>
+          <p>A welcoming masjid community in Havering North, serving Harold Hill, Romford and surrounding neighbourhoods.</p>
+        </div>
+        <div>
+          <h3 style="color: var(--accent-gold); margin-bottom: 12px; font-size: var(--step-h2);">Quick Links</h3>
+          <p style="margin: 0; line-height: 2;">
+            <a href="index.html">Home</a> &bull; 
+            <a href="#prayers">Prayer times</a> &bull; 
+            <a href="#jumuah">Friday Jumu'ah</a> &bull; 
+            <a href="services.html">Services &amp; Classes</a> &bull; 
+            <a href="donate.html">Support the masjid</a> &bull; 
+            <a href="#contact">Contact &amp; Visit</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-charity-note">
+        &copy; 2026 Da'watul Islam Havering North. A project of Da'watul Islam UK &amp; Eire (Registered Charity No. 1186155).
+      </div>
+      <p class="footer-credits">Pictures and footage: <a href="https://images.nasa.gov/details/GSFC_20141113_Volcanoes_m10183_Degassing_Clouds">"How Do Active Volcanoes Change Clouds"</a> via NASA Image and Video Library; <a href="https://www.metmuseum.org/art/collection/search/451699">"Planispheric Astrolabe"</a> by Muhammad Zaman al-Asturlabi (1065 AH), <a href="https://www.metmuseum.org/art/collection/search/452772">"Square Tile"</a> and <a href="https://www.metmuseum.org/art/collection/search/447256">"Tile from a Squinch"</a> via The Metropolitan Museum of Art (CC0); <a href="https://www.artic.edu/artworks/86467">"Twelve-Point Star Tile"</a> and <a href="https://www.artic.edu/artworks/13145">"Decorated Bookbinding"</a> via Art Institute of Chicago (CC0).</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT ENGINE & LOGIC -->
+  <script>
+    (function() {
+      'use strict';
+
+      /* 1. OCTOBER 2026 TIMETABLE OBJECT keyed by YYYY-MM-DD */
+      var SALAH_TIMETABLE_2026_10 = {
+        "2026-10-01": { fajr: "6:00 am", sunrise: "7:00 am", dhuhr: "1:30 pm", asr: "5:30 pm", maghrib: "6:42 pm", isha: "8:15 pm" },
+        "2026-10-02": { fajr: "6:00 am", sunrise: "7:01 am", dhuhr: "1:30 pm", asr: "5:30 pm", maghrib: "6:40 pm", isha: "8:15 pm", isJumuah: true },
+        "2026-10-03": { fajr: "6:00 am", sunrise: "7:03 am", dhuhr: "1:30 pm", asr: "5:30 pm", maghrib: "6:38 pm", isha: "8:15 pm" },
+        "2026-10-04": { fajr: "6:15 am", sunrise: "7:05 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:35 pm", isha: "8:15 pm" },
+        "2026-10-05": { fajr: "6:15 am", sunrise: "7:06 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:33 pm", isha: "8:15 pm" },
+        "2026-10-06": { fajr: "6:15 am", sunrise: "7:08 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:31 pm", isha: "8:15 pm" },
+        "2026-10-07": { fajr: "6:15 am", sunrise: "7:10 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:28 pm", isha: "8:15 pm" },
+        "2026-10-08": { fajr: "6:15 am", sunrise: "7:11 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:26 pm", isha: "8:15 pm" },
+        "2026-10-09": { fajr: "6:15 am", sunrise: "7:13 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:24 pm", isha: "8:15 pm", isJumuah: true },
+        "2026-10-10": { fajr: "6:15 am", sunrise: "7:15 am", dhuhr: "1:30 pm", asr: "5:00 pm", maghrib: "6:22 pm", isha: "8:15 pm" },
+        "2026-10-11": { fajr: "6:30 am", sunrise: "7:16 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:20 pm", isha: "8:00 pm" },
+        "2026-10-12": { fajr: "6:30 am", sunrise: "7:18 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:17 pm", isha: "8:00 pm" },
+        "2026-10-13": { fajr: "6:30 am", sunrise: "7:20 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:15 pm", isha: "8:00 pm" },
+        "2026-10-14": { fajr: "6:30 am", sunrise: "7:21 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:13 pm", isha: "8:00 pm" },
+        "2026-10-15": { fajr: "6:30 am", sunrise: "7:23 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:11 pm", isha: "8:00 pm" },
+        "2026-10-16": { fajr: "6:30 am", sunrise: "7:25 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:09 pm", isha: "8:00 pm", isJumuah: true },
+        "2026-10-17": { fajr: "6:30 am", sunrise: "7:27 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:07 pm", isha: "8:00 pm" },
+        "2026-10-18": { fajr: "6:30 am", sunrise: "7:28 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:05 pm", isha: "7:45 pm" },
+        "2026-10-19": { fajr: "6:30 am", sunrise: "7:30 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:02 pm", isha: "7:45 pm" },
+        "2026-10-20": { fajr: "6:30 am", sunrise: "7:32 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:00 pm", isha: "7:45 pm" },
+        "2026-10-21": { fajr: "6:30 am", sunrise: "7:33 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "5:58 pm", isha: "7:45 pm" },
+        "2026-10-22": { fajr: "6:30 am", sunrise: "7:35 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "5:56 pm", isha: "7:45 pm" },
+        "2026-10-23": { fajr: "6:30 am", sunrise: "7:37 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "5:54 pm", isha: "7:45 pm", isJumuah: true },
+        "2026-10-24": { fajr: "6:30 am", sunrise: "7:39 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "5:52 pm", isha: "7:45 pm" },
+        "2026-10-25": { fajr: "6:00 am", sunrise: "6:40 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:50 pm", isha: "7:30 pm" },
+        "2026-10-26": { fajr: "6:00 am", sunrise: "6:42 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:48 pm", isha: "7:30 pm" },
+        "2026-10-27": { fajr: "6:00 am", sunrise: "6:44 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:46 pm", isha: "7:30 pm" },
+        "2026-10-28": { fajr: "6:00 am", sunrise: "6:46 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:44 pm", isha: "7:30 pm" },
+        "2026-10-29": { fajr: "6:00 am", sunrise: "6:47 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:43 pm", isha: "7:30 pm" },
+        "2026-10-30": { fajr: "6:00 am", sunrise: "6:49 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:41 pm", isha: "7:30 pm", isJumuah: true },
+        "2026-10-31": { fajr: "6:00 am", sunrise: "6:51 am", dhuhr: "1:15 pm", asr: "3:15 pm", maghrib: "4:39 pm", isha: "7:30 pm" }
+      };
+
+      function parseTimeToMinutes(str) {
+        if (!str) return 0;
+        var parts = str.trim().split(' ');
+        var hm = parts[0].split(':');
+        var hours = parseInt(hm[0], 10);
+        var minutes = parseInt(hm[1], 10);
+        var meridiem = (parts[1] || '').toLowerCase();
+        if (meridiem === 'pm' && hours < 12) hours += 12;
+        if (meridiem === 'am' && hours === 12) hours = 0;
+        return hours * 60 + minutes;
+      }
+
+      function getISODate(d) {
+        var y = d.getFullYear();
+        var m = String(d.getMonth() + 1).padStart(2, '0');
+        var day = String(d.getDate()).padStart(2, '0');
+        return y + '-' + m + '-' + day;
+      }
+
+      function formatHijri(dateObj) {
+        try {
+          var hijriFormatter = new Intl.DateTimeFormat('en-GB-u-ca-islamic-umalqura', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+          });
+          return hijriFormatter.format(dateObj);
+        } catch (e) {
+          return "9 Jumada I 1448 AH";
+        }
+      }
+
+      function updatePrayerState() {
+        var now = new Date();
+        var iso = getISODate(now);
+        var dayData = SALAH_TIMETABLE_2026_10[iso];
+
+        if (!dayData) {
+          dayData = { fajr: "6:30 am", sunrise: "7:32 am", dhuhr: "1:30 pm", asr: "4:45 pm", maghrib: "6:00 pm", isha: "7:45 pm" };
+        }
+
+        var dateOpts = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+        var displayDateEl = document.getElementById('prayer-display-date');
+        if (displayDateEl) displayDateEl.textContent = now.toLocaleDateString('en-GB', dateOpts);
+
+        var hijriEl = document.getElementById('hijri-date-display');
+        if (hijriEl) hijriEl.textContent = formatHijri(now);
+
+        var sRise = document.getElementById('sunrise-time');
+        if (sRise) sRise.textContent = dayData.sunrise;
+
+        var tFajr = document.getElementById('time-fajr');
+        if (tFajr) tFajr.textContent = dayData.fajr;
+
+        var tDhuhr = document.getElementById('time-dhuhr');
+        if (tDhuhr) tDhuhr.textContent = dayData.dhuhr;
+
+        var tAsr = document.getElementById('time-asr');
+        if (tAsr) tAsr.textContent = dayData.asr;
+
+        var tMaghrib = document.getElementById('time-maghrib');
+        if (tMaghrib) tMaghrib.textContent = dayData.maghrib;
+
+        var tIsha = document.getElementById('time-isha');
+        if (tIsha) tIsha.textContent = dayData.isha;
+
+        var currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+        var prayerList = [
+          { key: 'fajr', name: 'Fajr', timeStr: dayData.fajr, colId: 'col-fajr', location: 'Farringdon Grove hub' },
+          { key: 'dhuhr', name: (now.getDay() === 5 ? "Jumu'ah" : 'Dhuhr'), timeStr: dayData.dhuhr, colId: 'col-dhuhr', location: (now.getDay() === 5 ? 'Rockchase Sport Centre' : 'Farringdon Grove hub') },
+          { key: 'asr', name: 'Asr', timeStr: dayData.asr, colId: 'col-asr', location: 'Farringdon Grove hub' },
+          { key: 'maghrib', name: 'Maghrib', timeStr: dayData.maghrib, colId: 'col-maghrib', location: 'Farringdon Grove hub' },
+          { key: 'isha', name: 'Isha', timeStr: dayData.isha, colId: 'col-isha', location: 'Farringdon Grove hub' }
+        ];
+
+        var nextPrayer = null;
+        var mFajr = parseTimeToMinutes(dayData.fajr);
+        var mDhuhr = parseTimeToMinutes(dayData.dhuhr);
+        var mAsr = parseTimeToMinutes(dayData.asr);
+        var mMaghrib = parseTimeToMinutes(dayData.maghrib);
+        var mIsha = parseTimeToMinutes(dayData.isha);
+
+        ['col-fajr', 'col-dhuhr', 'col-asr', 'col-maghrib', 'col-isha'].forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el) el.classList.remove('active');
+        });
+
+        if (currentMinutes < mFajr) {
+          nextPrayer = prayerList[0];
+          var elFajr = document.getElementById('col-fajr');
+          if (elFajr) elFajr.classList.add('active');
+        } else if (currentMinutes < mDhuhr) {
+          nextPrayer = prayerList[1];
+          var elDhuhr = document.getElementById('col-dhuhr');
+          if (elDhuhr) elDhuhr.classList.add('active');
+        } else if (currentMinutes < mAsr) {
+          nextPrayer = prayerList[2];
+          var elAsr = document.getElementById('col-asr');
+          if (elAsr) elAsr.classList.add('active');
+        } else if (currentMinutes < mMaghrib) {
+          nextPrayer = prayerList[3];
+          var elMaghrib = document.getElementById('col-maghrib');
+          if (elMaghrib) elMaghrib.classList.add('active');
+        } else if (currentMinutes < mIsha) {
+          nextPrayer = prayerList[4];
+          var elIsha = document.getElementById('col-isha');
+          if (elIsha) elIsha.classList.add('active');
+        } else {
+          nextPrayer = { key: 'fajr', name: 'Fajr (Tomorrow)', timeStr: '6:30 am', location: 'Farringdon Grove hub' };
+          var elLastIsha = document.getElementById('col-isha');
+          if (elLastIsha) elLastIsha.classList.add('active');
+        }
+
+        var targetMinutes = parseTimeToMinutes(nextPrayer.timeStr);
+        var diffMinutes = targetMinutes - currentMinutes;
+        if (diffMinutes < 0) diffMinutes += 24 * 60;
+
+        var hoursUntil = Math.floor(diffMinutes / 60);
+        var minsUntil = diffMinutes % 60;
+        var countdownStr = hoursUntil > 0 ? (hoursUntil + 'h ' + minsUntil + 'm') : (minsUntil + 'm');
+
+        var heroNameEl = document.getElementById('next-prayer-name');
+        var heroCountdownEl = document.getElementById('next-prayer-countdown');
+        var heroTimeEl = document.getElementById('next-prayer-time');
+        var heroLocEl = document.getElementById('next-prayer-location');
+
+        if (heroNameEl) {
+          if (nextPrayer.name.indexOf('(Tomorrow)') !== -1) {
+            var prayerCleanName = nextPrayer.name.replace(/\s*\(Tomorrow\)/i, '').trim();
+            heroNameEl.innerHTML = prayerCleanName + ' <span class="prayer-day-tag">Tomorrow</span>';
+          } else {
+            heroNameEl.textContent = nextPrayer.name;
+          }
+        }
+        if (heroCountdownEl) heroCountdownEl.textContent = countdownStr;
+        if (heroTimeEl) heroTimeEl.textContent = nextPrayer.timeStr;
+        if (heroLocEl) heroLocEl.textContent = 'at ' + nextPrayer.location;
+      }
+
+      function updateFunDayStatus() {
+        var eventDeadline = new Date(2026, 9, 24, 17, 0, 0);
+        var eventStart = new Date(2026, 9, 24, 12, 0, 0);
+        var now = new Date();
+        var badge = document.getElementById('funday-countdown-badge');
+        var section = document.getElementById('featured-event-section');
+
+        if (now > eventDeadline) {
+          if (section) section.style.display = 'none';
+        } else if (now >= eventStart && now <= eventDeadline) {
+          if (badge) badge.textContent = "Happening today! Join us now until 5:00 pm";
+        } else {
+          var diffMs = eventStart - now;
+          if (diffMs > 0) {
+            var diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            var diffHours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            if (badge) {
+              if (diffDays > 0) {
+                badge.textContent = "Starts in " + diffDays + " days, " + diffHours + " hours";
+              } else {
+                badge.textContent = "Starts in " + diffHours + " hours";
+              }
+            }
+          }
+        }
+      }
+
+      function setupCalendarDownload() {
+        var btn = document.getElementById('btn-add-calendar');
+        if (!btn) return;
+
+        btn.addEventListener('click', function() {
+          var icsData = [
+            'BEGIN:VCALENDAR',
+            'VERSION:2.0',
+            'PRODID:-//Dawatul Islam Havering North//Event//EN',
+            'CALSCALE:GREGORIAN',
+            'METHOD:PUBLISH',
+            'BEGIN:VEVENT',
+            'UID:funday-20261024-dihn@dawatul-islam-hn.org.uk',
+            'DTSTAMP:20261020T120000Z',
+            'DTSTART:20261024T110000Z',
+            'DTEND:20261024T160000Z',
+            'SUMMARY:Family Fun Day - Da\'watul Islam Havering North',
+            'DESCRIPTION:Free community event with stalls, a bouncy castle and free registered parking. Children under 18 must be with a parent or guardian. Everyone welcome.',
+            'LOCATION:MyPlace, 343 Dagnam Park Drive, Harold Hill, RM3 9EN',
+            'STATUS:CONFIRMED',
+            'END:VEVENT',
+            'END:VCALENDAR'
+          ].join('\r\n');
+
+          var blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+          var link = document.createElement('a');
+          link.href = window.URL.createObjectURL(blob);
+          link.setAttribute('download', 'DIHN-Family-Fun-Day-2026.ics');
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+      }
+
+      function setupCopyButtons() {
+        function attachCopy(btnId, valId) {
+          var btn = document.getElementById(btnId);
+          var val = document.getElementById(valId);
+          if (!btn || !val) return;
+
+          btn.addEventListener('click', function() {
+            var rawText = val.textContent.trim().replace(/-/g, '');
+            navigator.clipboard.writeText(rawText).then(function() {
+              btn.textContent = 'Copied!';
+              btn.classList.add('copied');
+              setTimeout(function() {
+                btn.textContent = (btnId === 'btn-copy-sort' ? 'Copy Sort' : 'Copy Acc');
+                btn.classList.remove('copied');
+              }, 2000);
+            }).catch(function() {
+              btn.textContent = 'Copied!';
+            });
+          });
+        }
+
+        attachCopy('btn-copy-sort', 'val-sort-code');
+        attachCopy('btn-copy-acc', 'val-acc-num');
+      }
+
+      function setupThemeToggle() {
+        var btn = document.getElementById('theme-toggle');
+        var label = document.getElementById('theme-label');
+        if (!btn) return;
+
+        function syncThemeUI(theme) {
+          if (label) label.textContent = theme === 'dark' ? 'Light' : 'Dark';
+          btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+          btn.setAttribute('title', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+          btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+        }
+
+        var currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        syncThemeUI(currentTheme);
+
+        btn.addEventListener('click', function() {
+          var current = document.documentElement.getAttribute('data-theme') || 'light';
+          var next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          try {
+            localStorage.setItem('dihn-theme', next);
+          } catch (e) {}
+          syncThemeUI(next);
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        setupThemeToggle();
+        updatePrayerState();
+        updateFunDayStatus();
+        setupCalendarDownload();
+        setupCopyButtons();
+        setInterval(updatePrayerState, 30000);
+      });
+    })();
+  </script>
+</body>
+</html>
